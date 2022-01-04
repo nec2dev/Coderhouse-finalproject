@@ -20,10 +20,55 @@ menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; list-style: none;
 }
 /*____________1. Global Styles____________*/
+@font-face {font-family: "microgramma"; src: url("../typography/Microgramma.otf");}
 body {
     background: linear-gradient(90deg, rgba(8,1,113,1) 0%, rgba(20,97,182,1) 65%, rgba(11,101,110,1) 100%);
 }
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 2em;
+    font-weight: 300;
+}
+h3 {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+p {
+    font-size: 0.8em;
+    margin: 1rem 0 1rem 0;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 0.5rem;
+}
+button {
+  flex: 1 1 auto;
+  width: 9rem;
+  height: 2rem;
+  text-align: center;
+  transition: 1s;
+  background-size: 200% auto;
+  box-shadow: 0 0 8px #eee;
+  border-radius: 10px;
+}
+button:hover {
+    background-position: right center; 
+  }
+.btn {
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    margin: 1rem;
+    padding: 2rem;
+    color: white;
+  }
 .container {
+    justify-content: center; 
+    padding: 1rem;
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
@@ -76,9 +121,27 @@ header .container input {
 }
 /*____________3.Main: presentation,facemenu,logcard____________*/
 main {
-    background-image: url(../img/background_space2.png); background-repeat: no-repeat; background-position: top;
+    background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
     height: 1080px;
     padding-top: 4rem;
+}
+.mainFacemenu {
+    height: 100%;
+}
+.mainFacemenu a {
+    text-decoration: none;
+    color: white;
+    font-family: "microgramma";
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+.mainLogcard {
+    background-image: linear-gradient(135deg, rgba(22, 29, 46, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
+    height: 100%;
+    border-radius: 1rem; 
+    text-align: center;
+    padding: 1rem;
+    filter: opacity(80);
 }
 /*____________4.Projects____________*/
 
@@ -95,48 +158,15 @@ main {
 /*____________10.Mediaqueries & Grids____________*/
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
-/* Small devices (landscape phones, 576px and up) */
-/* @media only screen and (min-width:276px) and (max-width:767px) {
-    .gridContainer {display: grid; grid-template-rows: 3rem 42rem repeat(6, 45rem); grid-template-areas: "header""main""projects""solutions""contacts""cv""budget""footer";}
-    header .container {display: grid; grid-template-rows: 20% 60% 20%; grid-template-areas: "headerContainer--menu headerContainer--searchbar headerContainer--logo";} .container nav {display: none;}
-    main .container {display: grid; grid-template-areas: "mainContainer--presentation" "mainContainer--facemenu" "mainContainer--logcard"; grid-template-rows: 5% 55% 40%; flex-direction: column;  align-content: stretch; justify-content: space-between; align-items: center;  justify-items: center}
-    .projectsContainer {display: grid; grid-template-columns: 1fr; grid-template-rows: auto auto auto auto auto auto; grid-template-areas:"proj-1""proj-2""proj-3""proj-4""proj-5""proj-6";}
-    .solutionsContainer {display: grid; grid-template-columns: 1fr; grid-template-rows: auto auto auto auto auto auto; grid-template-areas:"sol-1""sol-2""sol-3""sol-4""sol-5""sol-6";}
-    .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
-    footer .container {display: grid; grid-template-columns: repeat(3, 33.33%); grid-template-rows: 18rem 18rem 2rem; grid-template-areas: "col-1 col-2 col-3" "col-4 col-4 col-5""copyright copyright copyright"; align-items: start;} 
-}*/
-/* @media (min-width: 576px) and (max-width: 767px){}  */
-/* Medium devices (tablets, 768px and up) */
-/* @media only screen and (min-width:768px) and (max-width:991px) {
-    .gridContainer {display: grid; grid-template-columns: repeat(2, 50%); grid-template-rows: 4rem 63.5rem repeat(3, 33.75rem) 26rem; grid-template-areas: "header header""main main""projects solutions""contacts contacts""cv budget""footer footer";}
-    header .container {display: grid; grid-template-rows: 20% 40% 40%; grid-template-areas: "headerContainer--logo headerContainer--searchbar headerContainer--menu";} .container .fa {display: none;}
-    main .container {display: grid; grid-template-areas: "mainContainer--presentation mainContainer--facemenu mainContainer--logcard"; grid-template-columns: 20% 60% 20%; align-content: stretch; justify-content: start; align-items: center;  justify-items: center;}
-    .projectsContainer {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto auto; grid-template-areas:"proj-1 proj-2""proj-3 proj-4""proj-5 proj-6";}
-    .solutionsContainer {display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto auto; grid-template-areas:"sol-1 sol-2""sol-3 sol-4""sol-5 sol-6";}
-    .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
-    footer .container {display: grid; grid-template-columns: repeat(5, 20%); grid-template-rows: 18rem 2rem; grid-template-areas: "col-1 col-2 col-3 col-4 col-5""copyright copyright copyright copyright copyright"; align-items: start;} 
-}*/
-@media (min-width: 99px) and (max-width: 991px) {
+/* Small devices (landscape phones, 576px and 767px) */
+/* Medium devices (tablets, 768px and 991px) */
+@media (min-width: 1px) and (max-width: 991px) {
     header .navbar-nav {
         background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
         border-radius: 0 0 1rem 1rem;
     }
 }
-/* Large devices (desktops, 992px and up) */
-/* @media only screen and (min-width:992px) {
-    .gridContainer {display: grid; grid-template-columns: repeat(2, 50%); grid-template-rows: 4rem 63.5rem repeat(3, 33.75rem) 26rem; grid-template-areas: "header header""main main""projects solutions""contacts contacts""cv budget""footer footer";}
-    header .container {display: grid; grid-template-rows: 20% 60% 20%; grid-template-areas: "headerContainer--logo headerContainer--menu headerContainer--searchbar";} .container .fa {display: none;}
-    main .container {display: grid; grid-template-areas: "mainContainer--presentation mainContainer--facemenu mainContainer--logcard"; grid-template-columns: 20% 60% 20%; align-content: stretch; justify-content: start; align-items: center;  justify-items: center;}
-    .projectsContainer {display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto; grid-template-areas:"proj-1 proj-2 proj-3""proj-4 proj-5 proj-6";}
-    .solutionsContainer {display: grid; grid-template-rows: repeat(6,16.66%); grid-template-areas:"sol-1 sol-2 sol-3 sol-4 sol-5 sol-6";}
-    .contactsContainer {display: grid; grid-template-columns: repeat(3, 33.33%); grid-template-areas: "contactsContainer--left contactsContainer--right contactsContainer--right";}
-    .cvContainer {display: grid; grid-template-columns: repeat(5, 20%); grid-template-rows: auto auto; grid-template-areas: "cv-left cv-center cv-center cv-right cv-right""cv-left logofriends logofriends logofriends logofriends"; grid-gap: 1rem;}
-    footer .container {display: grid; grid-template-columns: repeat(5, 20%); grid-template-rows: 18rem 2rem; grid-template-areas: "col-1 col-2 col-3 col-4 col-5""copyright copyright copyright copyright copyright"; align-items: start;} 
-}*/
-/* X-Large devices (large desktops, 1200px and 1399px)  */
+/* Large devices (desktops, 992px and 1199px) */
+/* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */
-/* header {grid-area: header;} main {grid-area: main;} .projects {grid-area: projects;} .solutions {grid-area: solutions;} .contacts {grid-area: contacts;} .cv {grid-area: cv;} .prices {grid-area: prices;} .budget {grid-area: budget;} footer {grid-area: footer; height: 28rem;} .container {grid-area: container;} 
-    .headerContainer--menu {grid-area: headerContainer--menu;} .headerContainer--logo{grid-area: headerContainer--logo;} .col-1 {grid-area: col-1;} .col-2 {grid-area: col-2;} .col-3 {grid-area: col-4;} .col-3 {grid-area: col-4;} .col-5 {grid-area: col-5;} .copyright {grid-area: copyright;}
-    .mainContainer {grid-area: mainContainer;} .mainContainer--presentation {grid-area: mainContainer--presentation;} .mainContainer--facemenu {grid-area: mainContainer--facemenu;} .mainContainer--logcard {grid-area: mainContainer--logcard;}
-    .proj-1 {grid-area: proj-1;} .proj-2 {grid-area: proj-2;} .proj-3 {grid-area: proj-3;} .proj-4 {grid-area: proj-4;} .proj-5 {grid-area: proj-5;} .proj-6 {grid-area: proj-6;} .sol-1 {grid-area: sol-1;} .sol-2 {grid-area: sol-2;} .sol-3 {grid-area: sol-3;} .sol-4 {grid-area: sol-4;} .sol-5 {grid-area: sol-5;} .sol-6 {grid-area: sol-6;}
-    .contactsContainer--left {grid-area: contactsContainer--left;} .contactsContainer--right {grid-area: contactsContainer--right;} */
+
