@@ -17,7 +17,7 @@ samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,
 fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
 article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,
 menu,nav,output,ruby,section,summary,time,mark,audio,video {
-    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; list-style: none;
 }
 /*____________1. Global Styles____________*/
 body {
@@ -27,25 +27,59 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
+.container a, #navbarDropdown{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    margin: 0.5rem;
+}
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+    background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
+    border-radius: 0 0 1rem 1rem;
+}
+.dropdown-submenu {
+    position:relative; 
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top:-6px;
+}
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    user-select: none;
+  }
+/*_____________2.Header: logo, navbar, searchbar_____________*/
 header {
     background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
     height: 4rem;
 }
-header input {
+header .container img {
+    width: 80%;
+}
+header .container input {
     border-radius: 2em;
     outline: solid rgba(255, 255, 255, 0.534);
     background-color: rgb(255, 255, 255);
     color: rgb(73, 73, 73);
+    height: 1.2rem;
+    font-weight: bold;
+    font-size: 0.8em;
 }
+/*____________3.Main: presentation,facemenu,logcard____________*/
 main {
-    background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
+    background-image: url(../img/background_space2.png); background-repeat: no-repeat; background-position: top;
     height: 1080px;
     padding-top: 4rem;
 }
-/*_____________2.Header: logo, navbar, searchbar_____________*/
-
-/*____________3.Main: presentation,facemenu,logcard____________*/
-
 /*____________4.Projects____________*/
 
 /*____________5.Solutions____________*/
@@ -82,7 +116,12 @@ main {
     .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
     footer .container {display: grid; grid-template-columns: repeat(5, 20%); grid-template-rows: 18rem 2rem; grid-template-areas: "col-1 col-2 col-3 col-4 col-5""copyright copyright copyright copyright copyright"; align-items: start;} 
 }*/
-/* @media (min-width: 768px) and (max-width: 991px) {} */
+@media (min-width: 99px) and (max-width: 991px) {
+    header .navbar-nav {
+        background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
+        border-radius: 0 0 1rem 1rem;
+    }
+}
 /* Large devices (desktops, 992px and up) */
 /* @media only screen and (min-width:992px) {
     .gridContainer {display: grid; grid-template-columns: repeat(2, 50%); grid-template-rows: 4rem 63.5rem repeat(3, 33.75rem) 26rem; grid-template-areas: "header header""main main""projects solutions""contacts contacts""cv budget""footer footer";}
