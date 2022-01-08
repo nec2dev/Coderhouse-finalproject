@@ -43,6 +43,15 @@ ul li a {
     font-size: 0.8em;
     margin: 0.5rem;
 }
+button {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 14px;
+}
 .container {
     justify-content: center; 
     padding: 1.5rem;
@@ -62,6 +71,11 @@ ul li a {
 }
 .container ul {
     padding-left: 0;
+}
+.container button {
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+    margin: 0.7rem 0;
+    border-radius: 0.7rem;
 }
 .navbar-nav li:hover > ul.dropdown-menu {
     display: block;
@@ -207,10 +221,22 @@ main {
 .contacts-right {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 0.4rem 1.6rem;
+}
+.contacts-right .textInput input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid salmon;
 }
 .contactsFluid {
     background: rgb(217,117,108); background: linear-gradient(90deg, rgba(217,117,108,1) 0%, rgba(255,189,167,1) 35%, rgba(255,243,182,1) 100%);
     color: rgb(65, 65, 65);
+}
+.container .btnContacts a button {
+    background: salmon;
 }
 /*____________7.Prices____________*/
 .prices {

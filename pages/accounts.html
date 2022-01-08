@@ -126,28 +126,43 @@
                         </div>
                     </div>
                     <div class="contacts-right col-lg-8">
-                        <div>
-                            <label for="fname">First Name</label>
-                            <input type="name" name="fname" id="fname" placeholder="your first name" required>
-                            <label for="lname">Last Name</label>
-                            <input type="name" name="lname" id="lname" placeholder="your last name" required>
+                        <div class="row">
+                            <div class="textInput col-6">
+                                <label for="fname">First Name</label>
+                                <input type="name" name="fname" id="fname" placeholder="your first name" required>
+                            </div>
+                            <div class="textInput col-6">
+                                <label for="lname">Last Name</label>
+                                <input type="name" name="lname" id="lname" placeholder="your last name" required>
+                            </div>
                         </div>
-                        <label for="email">Mail</label>
-                        <input type="mail" name="email" id="email" placeholder="your email" required>
-                        <label for="phone">Phone</label>
-                        <input type="smartphone" name="phone" id="phone" placeholder="your phone" required>
-                        <h3>What the of project do you need?</h3>
-                        <input type="radio" name="" value="">Financial Analysis
-                        <input type="radio" name="" value="">Design System
-                        <input type="radio" name="" value="">Marketing Campaign
-                        <br>
-                        <input type="radio" name="" value="">Design Sprint
-                        <input type="radio" name="" value="">Develop Sprint
-                        <input type="radio" name="" value="">Improvement Sprint
-                        <h5>Message</h5>
-                        <label for="message">Write your message...</label>
-                        <input type="msn" name="message" id="message" placeholder="your message" required>
-                        <a href=""><button type="button">Send Message</button></a>
+                        <div class="row">
+                            <div class="textInput col-6">
+                                <label for="email">Mail</label>
+                                <input type="mail" name="email" id="email" placeholder="your email" required>
+                            </div>
+                            <div class="textInput col-6">
+                                <label for="phone">Phone</label>
+                                <input type="smartphone" name="phone" id="phone" placeholder="your phone" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h3>What the of project do you need?</h3>
+                            <div class="col-4"><input type="radio" name="" value="">Financial Analysis</div>
+                            <div class="col-4"><input type="radio" name="" value="">Design System</div>
+                            <div class="col-4"><input type="radio" name="" value="">Marketing Campaign</div>
+                            <div class="col-4"><input type="radio" name="" value="">Design Sprint</div>
+                            <div class="col-4"><input type="radio" name="" value="">Develop Sprint</div>
+                            <div class="col-4"><input type="radio" name="" value="">Improvement Sprint</div>
+                        </div>
+                        <div class="textInput">
+                            <h5>Message</h5>
+                            <label for="message">Write your message...</label>
+                            <input type="msn" name="message" id="message" placeholder="your message" required>
+                            <div class="btnContacts d-flex justify-content-end">
+                                <a href=""><button class="" type="button">Send Message</button></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -232,7 +247,8 @@
                         <p>+54 11 2 642 0901<br>nec2@solutions.com<br>3910 Saint Houston Street</p>
                     </div>
                     <div class="copyright col-sm-12 col-md-12 col-lg-12">
-                        <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the context of
+                        <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the
+                            context of
                             educational development in <img src="../assets/img/coderhouse.png"
                                 alt="coderhouse logo">.rights
                             reserved</p>
