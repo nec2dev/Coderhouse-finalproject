@@ -43,24 +43,6 @@ ul li a {
     font-size: 0.8em;
     margin: 0.5rem;
 }
-button {
-  flex: 1 1 auto;
-  width: 7rem;
-  height: 2rem;
-  text-align: center;
-  transition: 1s;
-  background-size: 200% auto;
-  border-radius: 1rem;
-}
-button:hover {
-    background-position: right center; 
-  }
-.btn {
-    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-    margin: 1rem;
-    padding: 2rem;
-    color: white;
-  }
 .container {
     justify-content: center; 
     padding: 1.5rem;
@@ -157,6 +139,12 @@ header .container input {
     font-weight: bold;
     font-size: 0.8em;
 }
+header .container-fluid .container a,
+header .container-fluid .container p,
+header .container-fluid .container h3, 
+header .container-fluid .container .fab {
+    color: rgb(65, 65, 65);
+}
 /*____________3.Main: presentation,facemenu,logcard____________*/
 main {
     background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
@@ -186,25 +174,52 @@ main {
 /*____________4.Projects____________*/
 .projects {
     height: 33.75rem;
+    padding-top: 9rem;
 }
 /*____________5.Solutions____________*/
 .solutions {
     height: 33.75rem;
+    padding-top: 9rem;
 }
 /*____________6.Contacts____________*/
 .contacts {
-    height: 33.75rem;
+    background-color: rgba(255, 219, 206, 0.575);-webkit-box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.75);
+    color: rgb(65, 65, 65);
+    border-radius: 1rem; 
+    margin: 5rem 0;  
+    padding: 0.8rem 1.6rem;
 }
-#contacts .container {
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: salmon;
+    color: white;
+    border-radius: 1rem;
+}
+.contacts-left iframe {
     width: 100%;
+    height: 16rem;
+    border-radius: 1rem;
+}
+.contacts-right {
+    display: flex;
+    flex-direction: column;
+}
+.contactsFluid {
+    background: rgb(217,117,108); background: linear-gradient(90deg, rgba(217,117,108,1) 0%, rgba(255,189,167,1) 35%, rgba(255,243,182,1) 100%);
+    color: rgb(65, 65, 65);
 }
 /*____________7.Prices____________*/
 .prices {
     height: 33.75rem;
+    padding-top: 9rem;
 }
 /*____________8.Cv____________*/
 .cv {
     height: 33.75rem;
+    padding-top: 9rem;
 }
 /*____________9.Footer____________*/
 footer ul {
@@ -214,6 +229,12 @@ footer img {
     width: 6rem;
     margin: 0.2rem 0;
 } 
+footer .container-fluid .container a,
+footer .container-fluid .container p,
+footer .container-fluid .container h3, 
+footer .container-fluid .container .fab {
+    color: rgb(65, 65, 65);
+}
 .copyright {
     text-align: center;
     margin: 1rem;
