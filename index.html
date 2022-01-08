@@ -36,9 +36,10 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
-                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
-                                    href=" ./pages/solutions.html" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">solutions</a>
+                            <li><a href="./pages/solutions.html" class="nav-link text-white">solutions</a></li>
+                            <li class="nav-item dropdown float-left"><a class="nav-link dropdown-toggle"
+                                    id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"></a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#">a.bit.at</a></li>
                                     <li><a class="dropdown-item" href="#">albatros</a></li>
@@ -60,7 +61,8 @@
                                     <li><a class="dropdown-item" href="#">SessessionsNow</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link text-white" href="/pages/accounts.html">contact</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="/pages/accounts.html">contact</a>
+                            </li>
                             <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
                                     href=" ./pages/prices.html" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">prices</a>
@@ -92,7 +94,7 @@
     <main>
         <canvas id="canvas"></canvas>
         <div class="container">
-            
+
             <div class="row">
                 <!-- Acá empieza la presentación del sitio -->
                 <section class="mainPresentation col-sm-12 col-md-12 col-lg-3 col-xl-2">
@@ -146,11 +148,11 @@
 
     <div class="container">
         <div class="row">
-            <section class="col-12 border">
+            <section class="projects col-sm-12 col-md-6 col-lg-6">
                 <h2>myProjects</h2>
                 <a href="./pages/projects.html"><button type="button">Projects</button></a>
             </section>
-            <section class="col-12 border">
+            <section class="solutions col-sm-12 col-md-6 col-lg-6">
                 <h2>mySolution</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames
                     gravida
@@ -162,7 +164,7 @@
 
     <div class="container">
         <div class="row">
-            <section class="col-12 border">
+            <section class="contacts col-12">
                 <h2>Contacts</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames gravida
                     rutrum.
@@ -178,23 +180,38 @@
             </section>
         </div>
     </div>
-
-    <div class="container">
-        <div class="row">
-            <section class="col-12 border">
-                <h2>Cv</h2>
-                <a href="./pages/cv.html"><button type="button">View my resume</button></a>
-            </section>
-            <section class="col-12 border">
-                <h2>Prices</h2>
-                <a href="./pages/prices.html"><button type="button">Ask for budget</button></a>
-            </section>
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+    <div class="container-fluid bg-white">
+        <div class="container">
+            <div class="row">
+                <section class="cv col-sm-12 col-md-6 col-lg-6">
+                    <h2>Cv</h2>
+                    <a href="./pages/cv.html"><button type="button">View my resume</button></a>
+                </section>
+                <section class="prices col-sm-12 col-md-6 col-lg-6">
+                    <h2>Prices</h2>
+                    <a href="./pages/prices.html"><button type="button">Ask for budget</button></a>
+                </section>
+            </div>
         </div>
     </div>
-
+    <!--Footer,copyright-->
     <footer class="container">
         <div class=row>
-            <div class="col-4 border">
+            <div class="col-sm-4 col-md-4 col-lg-2">
                 <h3>EXPLORE</h3>
                 <ul>
                     <li><a href="./pages/solutions.html">solutions</a></li>
@@ -205,7 +222,7 @@
                 </ul>
 
             </div>
-            <div class="col-4 border">
+            <div class="col-sm-4 col-md-4 col-lg-2">
                 <h3>SOLUTIONS</h3>
                 <ul>
                     <li><a href="https://www.abitatdev.com">a.bit.at</a></li>
@@ -222,23 +239,22 @@
                     <li><a href="">Local Sitemap</a></li>
                 </ul>
             </div>
-            <div class="col-4 border">
+            <div class="col-sm-4 col-md-4 col-lg-2">
                 <h3>OVERWIEV</h3>
                 <ul>
                     <li><a href="">about</a></li>
                     <li><a href="">carrers</a></li>
                     <li><a href="">press</a></li>
                     <li><a href="">contact</a></li>
+                    <li> </li>
                 </ul>
                 <br>
                 <a href="./index.html"><img src="./assets/img/logo.png" alt="nec2 solutions logo"></a>
             </div>
-            <div class="col-6 border">
+            <div class="col-sm-4 col-md-4 col-lg-2">
                 <ul>
                     <li><a href="">Community</a></li>
                     <li><a href="">Help</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Map</a></li>
                 </ul>
                 <br>
                 <h3>FOLLOW ME</h3>
@@ -252,7 +268,13 @@
                     <span><i class="fab fa-twitch"></i></span>
                 </ul>
             </div>
-            <div class="col-6 border">
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <ul>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Map</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2">
                 <h3>NEC2 SOLUTIONS APP</h3>
                 <p>take your favorite startup<br>with you and never miss<br>a beat</p>
                 <a href=""><img src="./assets/img/appstore.png" alt=""></a>
@@ -260,8 +282,7 @@
                 <a href=""><img src="./assets/img/googleplay.png" alt=""></a>
                 <p>+54 11 2 642 0901<br>nec2@solutions.com<br>3910 Saint Houston Street</p>
             </div>
-
-            <div class="col-12 border">
+            <div class="copyright col-sm-12 col-md-12 col-lg-12">
                 <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the context of
                     educational development in <img src="./assets/img/coderhouse.png" alt="coderhouse logo">.rights
                     reserved</p>
@@ -271,7 +292,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script src="./assets/js/stars.js"></script>
+    <script src="./assets/js/stars.js"></script>
 </body>
 
 </html>

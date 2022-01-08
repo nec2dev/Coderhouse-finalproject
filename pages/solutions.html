@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>solutions</title>
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+    <!--CSS´s-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/5ffbcf3a6c.js" crossorigin="anonymous"></script>
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
@@ -18,29 +22,74 @@
 </head>
 
 <body>
-    <div class="gridContainer--solutions">
-        <header>
-            <div class="container">
-                <div class="headerContainer--logo">
-                    <a href="../index.html"><img src="../assets/img/logo.svg" alt="nec2 solutions logo"></a>
-                </div>
-                <div class="headerContainer--menu">
-                    <a href="#" class="fa fa-bars"></a>
-                    <nav>
-                        <ul>
-                            <li><a href="../pages/solutions.html">solutions</a></li>
-                            <li><a href="../pages/projects.html">projects</a></li>
-                            <li><a href="../pages/accounts.html">accounts</a></li>
-                            <li><a href="../pages/prices.html">prices</a></li>
-                            <li><a href="../pages/cv.html">cv</a></li>
+    <!-- Header: Logo, menu, searchbar -->
+    <header class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.svg"
+                            alt="nec2 solutions logo"></a>
+                    <button class="navbar-toggler bg-transparent text-info-50" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-white"><i class="fas fa-bars"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href=" ../pages/solutions.html" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">solutions</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">a.bit.at</a></li>
+                                    <li><a class="dropdown-item" href="#">albatros</a></li>
+                                    <li><a class="dropdown-item" href="#">alkemi</a></li>
+                                    <li><a class="dropdown-item" href="#">apar-zero</a></li>
+                                    <li><a class="dropdown-item" href="#">alephandria</a></li>
+                                    <li><a class="dropdown-item" href="#">arquitephia</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href=" ../pages/projects.html" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">projects</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Cartapacia</a></li>
+                                    <li><a class="dropdown-item" href="#">HeadroomAIConnections</a></li>
+                                    <li><a class="dropdown-item" href="#">Nahuel,Arts&Westler</a></li>
+                                    <li><a class="dropdown-item" href="#">Post-Titan</a></li>
+                                    <li><a class="dropdown-item" href="#">Rattamanhattan</a></li>
+                                    <li><a class="dropdown-item" href="#">SessessionsNow</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-white" href="../pages/accounts.html">contact</a>
+                            </li>
+                            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                                    href=" ../pages/prices.html" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">prices</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Financial Analysis</a></li>
+                                    <li><a class="dropdown-item" href="#">Design System</a></li>
+                                    <li><a class="dropdown-item" href="#">Marketing Campaign</a></li>
+                                    <li><a class="dropdown-item" href="#">Design Sprints</a></li>
+                                    <li><a class="dropdown-item" href="#">Develop Sprints</a></li>
+                                    <li><a class="dropdown-item" href="#">Improvement Sprints</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Global project</a></li>
+                                    <li><a class="dropdown-item" href="#">Wathever</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link text-white" href="../pages/cv.html">cv</a></li>
                         </ul>
-                    </nav>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <!-- <button class="btn btn-outline-info" type="submit">Search</button> -->
+                        </form>
+                    </div>
                 </div>
-                <div class="headerContainer--searchbar">
-                    <input type="text" placeholder="Search..." required>
-                </div>
-            </div>
-        </header>
+            </nav>
+        </div>
+    </header>
         <section class="solutions">
             <h2>mySolution</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames
@@ -55,93 +104,91 @@
                 <img class="imgGalery sol-6" src="../assets/img/sol-6.png" alt="">
             </div>
         </section>
-        <footer>
-            <div class="container">
-                <div class="col-1">
-                    <h3>EXPLORE</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li><a href="../pages/solutions.html">solutions</a></li>
-                        <li><a href="../pages/projects.html">projects</a></li>
-                        <li><a href="../pages/accounts.html">accounts</a></li>
-                        <li><a href="../pages/prices.html">prices</a></li>
-                        <li><a href="../pages/cv.html">cv</a></li>
-                    </ul>
-                </div>
-                <div class="col-2">
-                    <ul>
-                        <li>
-                            <h3>SOLUTIONS</h3>
-                        </li>
-                        <li></li>
-                        <li><a href="https://www.abitatdev.com">a.bit.at</a></li>
-                        <li><a href="https://www.alkemi.com">alkemi</a></li>
-                        <li><a href="https://www.aparzero.com">apar-zero</a></li>
-                        <li><a href="https://www.alephandria.com">alephandria</a></li>
-                        <li><a href="https://www.arquitepia.com">arquitephia</a></li>
-                    </ul></a>
-                    <ul>
-                        <li></li>
-                        <li><a href="">Terms of Use</a></li>
-                        <li><a href="">Privacy policy</a></li>
-                        <li><a href="">Global sitemap</a></li>
-                        <li><a href="">Local Sitemap</a></li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <ul>
-                        <li>
-                            <h3>OVERWIEV</h3>
-                        </li>
-                        <li></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">carrers</a></li>
-                        <li><a href="">press</a></li>
-                        <li><a href="">contact</a></li>
-                        <li></li>
-                    </ul>
-                    <a href="../index.html"><img src="../assets/img/logo.png" alt="nec2 solutions logo"></a>
-                </div>
-                <div class="col-4">
-                    <ul>
-                        <li><a href="">Community</a></li>
-                        <li><a href="">Help</a></li>
-                        <li><a href="">Support</a></li>
-                        <li><a href="">Map</a></li>
-                        <li></li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h3>FOLLOW ME</h3>
-                        </li>
-                        <!-- Add font awesome icons -->
-                        <li> </li>
-                        <a href="#" class="fa fa-github"></a>
-                        <a href="#" class="fa fa-behance"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-youtube"></a>
-                        <a href="#" class="fa fa-twitch"></a>
-                    </ul>
-                </div>
-                <div class="col-5">
-                    <h3>NEC2 SOLUTIONS APP</h3>
-                    <p>take your favorite startup<br>with you and never miss<br>a beat</p>
-                    <a href=""><img src="../assets/img/appstore.png" alt=""></a>
-                    <br>
-                    <a href=""><img src="../assets/img/googleplay.png" alt=""></a>
-                    <p>+54 11 2 642 0901<br>nec2@solutions.com<br>3910 Saint Houston Street</p>
-                </div>
-                <div class="copyright">
-                    <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the context of
-                        educational development in <img src="../assets/img/coderhouse.png" alt="coderhouse logo">.rights
-                        reserved</p>
-                </div>
+        <!--Acá comienza el footer-->
+    <footer class="container">
+        <div class=row>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <h3>EXPLORE</h3>
+                <ul>
+                    <li><a href="../pages/solutions.html">solutions</a></li>
+                    <li><a href="../pages/projects.html">projects</a></li>
+                    <li><a href="../pages/accounts.html">accounts</a></li>
+                    <li><a href="../pages/prices.html">prices</a></li>
+                    <li><a href="../pages/cv.html">cv</a></li>
+                </ul>
+
             </div>
-        </footer>
-    </div>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <h3>SOLUTIONS</h3>
+                <ul>
+                    <li><a href="https://www.abitatdev.com">a.bit.at</a></li>
+                    <li><a href="https://www.alkemi.com">alkemi</a></li>
+                    <li><a href="https://www.aparzero.com">apar-zero</a></li>
+                    <li><a href="https://www.alephandria.com">alephandria</a></li>
+                    <li><a href="https://www.arquitepia.com">arquitephia</a></li>
+                </ul>
+                <br>
+                <ul>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Global sitemap</a></li>
+                    <li><a href="">Local Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <h3>OVERWIEV</h3>
+                <ul>
+                    <li><a href="">about</a></li>
+                    <li><a href="">carrers</a></li>
+                    <li><a href="">press</a></li>
+                    <li><a href="">contact</a></li>
+                    <li> </li>
+                </ul>
+                <br>
+                <a href="../index.html"><img src="../assets/img/logo.png" alt="nec2 solutions logo"></a>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <ul>
+                    <li><a href="">Community</a></li>
+                    <li><a href="">Help</a></li>
+                </ul>
+                <br>
+                <h3>FOLLOW ME</h3>
+                <ul>
+                    <span><i class="fab fa-github"></i></span>
+                    <span><i class="fab fa-behance"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                    <span><i class="fab fa-youtube"></i></span>
+                    <span><i class="fab fa-twitch"></i></span>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <ul>
+                    <li><a href="">Support</a></li>
+                    <li><a href="">Map</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-2">
+                <h3>NEC2 SOLUTIONS APP</h3>
+                <p>take your favorite startup<br>with you and never miss<br>a beat</p>
+                <a href=""><img src="../assets/img/appstore.png" alt=""></a>
+                <br>
+                <a href=""><img src="../assets/img/googleplay.png" alt=""></a>
+                <p>+54 11 2 642 0901<br>nec2@solutions.com<br>3910 Saint Houston Street</p>
+            </div>
+            <div class="copyright col-sm-12 col-md-12 col-lg-12">
+                <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the context of
+                    educational development in <img src="../assets/img/coderhouse.png" alt="coderhouse logo">.rights
+                    reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/stars.js"></script>
 </body>
 
 </html>
