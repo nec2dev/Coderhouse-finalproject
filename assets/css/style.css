@@ -197,6 +197,7 @@ main {
     background-color: salmon;
     color: white;
     border-radius: 1rem;
+    padding: 0.4rem 1.6rem;
 }
 .contacts-left iframe {
     width: 100%;
