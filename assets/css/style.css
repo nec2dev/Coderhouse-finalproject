@@ -238,6 +238,9 @@ main {
 .container .btnContacts a button {
     background: salmon;
 }
+.logoFilter {
+    filter: invert(75%);
+}
 /*____________7.Prices____________*/
 .prices {
     height: 33.75rem;
