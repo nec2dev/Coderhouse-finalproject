@@ -245,8 +245,8 @@ main {
 .cv-left ul li {
     border-bottom-style: solid;
     border-width: 2px;
-    margin: 1rem 0;
-    padding: 1rem 0;;
+    margin: 1rem;
+    padding: 1rem 0;
     font-size: 0.8em;
 }
 .cv-left .fa {
@@ -261,8 +261,14 @@ main {
 .cv-right {
     background-color: violet;
 }
-.logofriends {
+.cvfriends {
     background-color: sandybrown;
+}
+.logofriends {
+    z-index:1;
+}
+.brandKent {
+    z-index:2;
 }
 /*____________9.Footer____________*/
 footer ul {
@@ -295,9 +301,9 @@ footer .container-fluid .container .fab {
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {
-    .cvContainer {display: grid; grid-template-columns: repeat(8, 12.5%); grid-template-rows: 65% 35%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-right cv-right cv-right""cv-left cv-left logofriends logofriends logofriends logofriends logofriends logofriends";}
+    .cvContainer {display: grid; grid-template-columns: repeat(8, 12.5%); grid-template-rows: 65% 35%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-right cv-right cv-right""cv-left cv-left cvfriends cvfriends cvfriends cvfriends cvfriends cvfriends";}
 }
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */
-.cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .logofriends {grid-area: logofriends;}
+.cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cvfriends {grid-area: cvfriends;}
 
