@@ -77,23 +77,6 @@ button {
     margin: 0.7rem 0;
     border-radius: 0.7rem;
 }
-.navbar-nav li:hover > ul.dropdown-menu {
-    display: block;
-    background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
-    border-radius: 0 0 1rem 1rem;
-}
-.dropdown-submenu {
-    position:relative; 
-}
-.dropdown-submenu > .dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top:-6px;
-}
-.dropdown-menu > li > a:hover:after {
-    text-decoration: underline;
-    transform: rotate(-90deg);
-} 
 /*____________animations____________*/
 #canvas {
     position: absolute;
@@ -159,14 +142,17 @@ header .container-fluid .container h3,
 header .container-fluid .container .fab {
     color: rgb(65, 65, 65);
 }
+.headerNoImage {
+    background-image: none;
+}
 /*____________3.Main: presentation,facemenu,logcard____________*/
 main {
     background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
-    height: 1080px;
+    height: 58.5rem;
     padding-top: 9rem;
 }
 .mainPresentation {
-    overflow: visible;
+    text-align: left;
 }
 .mainFacemenu {
     text-align: center;
@@ -251,6 +237,33 @@ main {
     height: 33.75rem;
     padding-top: 9rem;
 }
+.cv-left {
+    text-align: center;
+    padding: 2rem 0.5rem;
+    margin-top: 3rem;
+}
+.cv-left ul li {
+    border-bottom-style: solid;
+    border-width: 2px;
+    margin: 1rem 0;
+    padding: 1rem 0;;
+    font-size: 0.8em;
+}
+.cv-left .fa {
+    font-size: 1.5em;
+}
+.cv-left tr td {
+    width: 50%;
+}
+.cv-center {
+    background-color: turquoise;
+}
+.cv-right {
+    background-color: violet;
+}
+.logofriends {
+    background-color: sandybrown;
+}
 /*____________9.Footer____________*/
 footer ul {
     margin-bottom: 1.5rem;
@@ -273,14 +286,18 @@ footer .container-fluid .container .fab {
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
 /* Small devices (landscape phones, 576px and 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
+}
 /* Medium devices (tablets, 768px and 991px) */
 @media (min-width: 1px) and (max-width: 991px) {
-    header .navbar-nav {
-        background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
-        border-radius: 0 0 1rem 1rem;
-    }
+    .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
 }
 /* Large devices (desktops, 992px and 1199px) */
+@media only screen and (min-width:992px) {
+    .cvContainer {display: grid; grid-template-columns: repeat(8, 12.5%); grid-template-rows: 65% 35%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-right cv-right cv-right""cv-left cv-left logofriends logofriends logofriends logofriends logofriends logofriends";}
+}
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */
+.cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .logofriends {grid-area: logofriends;}
 
