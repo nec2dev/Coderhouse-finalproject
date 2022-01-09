@@ -237,16 +237,14 @@ main {
     height: 33.75rem;
     padding-top: 9rem;
 }
-.cv-left {
-    text-align: center;
-    padding: 2rem 0.5rem;
-    margin-top: 3rem;
+.cvContainer {
+    overflow: hidden;
 }
 .cv-left ul li {
     border-bottom-style: solid;
     border-width: 2px;
-    margin: 1rem;
-    padding: 1rem 0;
+    margin: 0.5rem;
+    padding: 0.5rem 0;
     font-size: 0.8em;
 }
 .cv-left .fa {
@@ -261,13 +259,13 @@ main {
 .cv-right {
     background-color: violet;
 }
-.cvfriends {
+.cv-friends {
     background-color: sandybrown;
+    z-index:1;
+    position: relative;
 }
 .logofriends {
-    z-index:1;
-}
-.brandKent {
+    position: absolute;
     z-index:2;
 }
 /*____________9.Footer____________*/
@@ -293,17 +291,20 @@ footer .container-fluid .container .fab {
 /* X-Small devices (portrait phones, less than 576px) */
 /* Small devices (landscape phones, 576px and 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
-    .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
+    .cvContainer {display: grid; grid-template-rows: 20% 50% 15% 15%; grid-template-areas: "cv-center""cv-left""cv-friends""cv-right";}
+    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right: -50%;} .brandKent img {width: 50%;}
 }
 /* Medium devices (tablets, 768px and 991px) */
-@media (min-width: 1px) and (max-width: 991px) {
-    .contactsContainer {display: grid; grid-template-rows: repeat(2, 50%); grid-template-areas: "contactsContainer--right" "contactsContainer--left";}
+@media (min-width: 768px) and (max-width: 991px) {
+    .cvContainer {display: grid; grid-template-columns: 35% 65%; grid-template-rows: 22% 58% 20%; grid-template-areas: "cv-center cv-center""cv-left cv-friends""cv-right cv-right";}
+    .cv-left {text-align: left; padding: 0 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right: -15%;} .brandKent img {width: 80%;}
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {
-    .cvContainer {display: grid; grid-template-columns: repeat(8, 12.5%); grid-template-rows: 65% 35%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-right cv-right cv-right""cv-left cv-left cvfriends cvfriends cvfriends cvfriends cvfriends cvfriends";}
+    .cvContainer {display: grid; grid-template-columns: repeat(8, 12.5%); grid-template-rows: 75% 25%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-right cv-right cv-right""cv-left cv-left cv-friends cv-friends cv-friends cv-friends cv-friends cv-friends";}
+    .cv-left {text-align: center; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: -1px; right: 10%;}
 }
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */
-.cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cvfriends {grid-area: cvfriends;}
+.cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cv-friends {grid-area: cv-friends;}
 
