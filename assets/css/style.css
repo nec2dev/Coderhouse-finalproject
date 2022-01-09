@@ -41,7 +41,6 @@ ul li a {
     text-decoration: none;
     color: white;
     font-size: 0.8em;
-    margin: 0.5rem;
 }
 button {
     color: white;
@@ -66,52 +65,41 @@ button {
     color: white;
     font-weight: bold;
     font-size: 0.8em;
-    margin: 0.5rem;
 }
 .container ul {
     padding-left: 0;
 }
 .container button {
-    background-image: linear-gradient(135deg, rgba(90, 107, 151, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
-    margin: 0.7rem 0;
+    background-color: rgba(11, 8, 36, 0.842);
     border-radius: 0.7rem;
 }
 .logoFilter {
     filter: invert(75%);
 }
+.navbar-nav li a{
+    color: darkslategrey;
+}
+.dropdown-menu li a {
+    color: darkslategrey;
+}
 /*____________animations____________*/
-#canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    user-select: none;
-}
-.waves {
-    width: 100%;
-    height:15vh;
-    min-height:100px;
-    max-height:150px;
-}
-.parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-}
+#canvas {position: absolute; top: 0; left: 0; user-select: none;}
+.waves {width: 100%;height:15vh;min-height:100px;max-height:150px;}
+.parallax > use {animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;}
+.parallax > use:nth-child(1) {animation-delay: -2s;animation-duration: 7s;}
+.parallax > use:nth-child(2) {animation-delay: -3s;animation-duration: 10s;}
+.parallax > use:nth-child(3) {animation-delay: -4s;animation-duration: 13s;}
+.parallax > use:nth-child(4) {animation-delay: -5s;animation-duration: 20s;}
 @keyframes move-forever { 0% {transform: translate3d(-90px,0,0);} 100% { transform: translate3d(85px,0,0);}}
+@property --rotate {syntax: "<angle>";initial-value: 132deg;inherits: false;}:root { --card-height: 2rem;--card-width: 8rem;}
+.btn {background: #191c29;width: var(--card-width);height: var(--card-height);padding: 3px;position: relative;border-radius: 0.7rem;justify-content: center;
+    align-items: center;text-align: center;display: flex;font-size: 1.5em;color: rgb(88 199 250 / 0%);cursor: pointer;}
+.btn:hover {color: rgb(88 199 250 / 100%);transition: color 1s;}.btn:hover:before, .card:hover:after {animation: none;opacity: 0;}
+.btn::before {content: "";width: 100%;height: 100%;border-radius: 0.7rem;background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;z-index: -1;animation: spin 2.5s linear infinite;}
+.btn::after {position: absolute;content: "";top: calc(var(--card-height) / 6);left: 0;right: 0;z-index: -1;height: 100%;width: 100%;margin: 0 auto;transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);opacity: 1;transition: opacity .5s;animation: spin 2.5s linear infinite;}
+@keyframes spin {0% {--rotate: 0deg;}100% {--rotate: 360deg;}}
 /*_____________2.Header: logo, navbar, searchbar_____________*/
 header {
     background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
@@ -212,7 +200,7 @@ main {
     border-bottom: 2px solid salmon;
 }
 .contactsFluid {
-    background: rgb(217,117,108); background: linear-gradient(90deg, rgba(217,117,108,1) 0%, rgba(255,189,167,1) 35%, rgba(255,243,182,1) 100%);
+    background: linear-gradient(90deg, rgba(217,117,108,1) 0%, rgba(255,189,167,1) 35%, rgba(255,243,182,1) 100%);
     color: rgb(65, 65, 65);
 }
 .container .btnContacts a button {
@@ -265,7 +253,6 @@ main {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: end;
-    margin-top: 1.3rem;
 }
 .logofriends img {
     margin: 0.5rem;
