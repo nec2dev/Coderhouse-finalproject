@@ -1,0 +1,63 @@
+/*____________1. Global Styles____________*/
+@font-face {font-family: "microgramma"; src: url("../typography/Microgramma.otf");}
+.fab {color: rgb(255, 255, 255); text-decoration: none; margin: 3px; font-size: 1rem; cursor: pointer; cursor: pointer;}
+body {
+    background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+}
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+p {
+    font-size: 0.8em;
+    margin: 1rem 0 1rem 0;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8em;
+}
+button {
+    color: white;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 14px;
+}
+.container {
+    justify-content: center; 
+    padding: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.container h3 {
+    font-size: 0.7em;
+    font-weight: bold;
+}
+.container a, #navbarDropdown{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+.container ul {
+    padding-left: 0;
+}
+.container button {
+    background-color: rgba(11, 8, 36, 0.842);
+    border-radius: 0.7rem;
+}
+.logoFilter {
+    filter: invert(75%);
+}
+.navbar-nav li a{
+    color: darkslategrey;
+}
+.dropdown-menu li a {
+    color: darkslategrey;
+}

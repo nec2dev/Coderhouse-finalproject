@@ -1,0 +1,27 @@
+/*_____________2.Header: logo, navbar, searchbar_____________*/
+header {
+    background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
+    height: 6rem;
+    position: relative;
+}
+header .container img {
+    width: 80%;
+}
+header .container input {
+    border-radius: 2em;
+    outline: solid rgba(255, 255, 255, 0.534);
+    background-color: rgb(255, 255, 255);
+    color: rgb(73, 73, 73);
+    height: 1.2rem;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+header .container-fluid .container a,
+header .container-fluid .container p,
+header .container-fluid .container h3, 
+header .container-fluid .container .fab {
+    color: rgb(65, 65, 65);
+}
+.headerNoImage {
+    background-image: none;
+}
