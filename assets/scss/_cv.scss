@@ -3,32 +3,32 @@
     height: 33.75rem;
     padding-top: 9rem;
 }
-.cv-left ul li {
+.cvLeft ul li {
     border-bottom-style: solid;
     border-width: 2px;
     margin: 0.5rem;
     padding: 0.5rem 0;
     font-size: 0.8em;
 }
-.cv-left .fa {
+.cvLeft .fa {
     font-size: 1.5em;
 }
-.cv-left tr td {
+.cvLeft tr td {
     width: 50%;
 }
-.cv-center {
+.cvCenter {
     padding: 0 8%;
     margin-top: -5%;
 }
-.cv-center h2, .cv-right h2 {
+.cvCenter h2, .cvRight h2 {
     font-weight: 900;
     text-align: right;
 }
-.cv-right {
+.cvRight {
     padding: 0 8%;
     margin-top: 7rem;
 }
-.cv-friends {
+.cvFriends {
     z-index:1;
 }
 .logofriends {

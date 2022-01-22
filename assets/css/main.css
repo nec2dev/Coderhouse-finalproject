@@ -1,0 +1,608 @@
+/*[TABLE OF CONTENTS]
+0. Standard CSS Reset  
+1. Global Styles 
+2. Aimations & Transforms
+3. Header: logo, navbar, searchbar Main: presentation, facemenu, Logcard
+4. Solutions 
+5. Projects
+6. Contacts
+7. Prices
+8. Cv
+9. Footer, copyright
+10. Mediaqueries & Grids*/
+/*____________0. Standard SASS Reset____________*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/*____________1. Global Styles____________*/
+@font-face {
+  font-family: "microgramma";
+  src: url("../typography/Microgramma.otf");
+}
+
+.fab {
+  color: white;
+  text-decoration: none;
+  margin: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  cursor: pointer;
+}
+
+body {
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.8em;
+  margin: 1rem 0 1rem 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+button {
+  color: white;
+  border: none;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.container h3 {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.container a, #navbarDropdown {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.container ul {
+  padding-left: 0;
+}
+
+.container button {
+  background-color: rgba(11, 8, 36, 0.842);
+  border-radius: 0.7rem;
+}
+
+.logoFilter {
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+.navbar-nav li a {
+  color: darkslategrey;
+}
+
+.dropdown-menu li a {
+  color: darkslategrey;
+}
+
+/*____________animations____________*/
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.waves {
+  width: 100%;
+  height: 15vh;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*_____________2.Header: logo, navbar, searchbar_____________*/
+header {
+  background-image: url(../img/background_space.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 6rem;
+  position: relative;
+}
+
+header .container img {
+  width: 80%;
+}
+
+header .container input {
+  border-radius: 2em;
+  outline: solid rgba(255, 255, 255, 0.534);
+  background-color: white;
+  color: #494949;
+  height: 1.2rem;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+header .container-fluid .container a,
+header .container-fluid .container p,
+header .container-fluid .container h3,
+header .container-fluid .container .fab {
+  color: #414141;
+}
+
+.headerNoImage {
+  background-image: none;
+}
+
+/*____________3.Main: presentation,facemenu,logcard____________*/
+main {
+  background-image: url(../img/background_space.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 58.5rem;
+  padding-top: 9rem;
+}
+
+.mainPresentation {
+  text-align: left;
+}
+
+.mainFacemenu {
+  text-align: center;
+}
+
+.mainFacemenu a {
+  text-decoration: none;
+  color: white;
+  font-family: "microgramma";
+  font-size: 1.3rem;
+}
+
+.mainLogcard {
+  background-image: linear-gradient(135deg, rgba(90, 107, 151, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
+  height: 100%;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  -webkit-filter: opacity(80);
+          filter: opacity(80);
+}
+
+/*____________4.Projects____________*/
+.projects {
+  height: 33.75rem;
+  padding-top: 9rem;
+}
+
+/*____________6.Contacts____________*/
+.contacts {
+  background-color: rgba(255, 219, 206, 0.575);
+  -webkit-box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+  color: #414141;
+  border-radius: 1rem;
+  margin: 5rem 0;
+  padding: 0.8rem 1.6rem;
+}
+
+.contacts-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: salmon;
+  color: white;
+  border-radius: 1rem;
+  padding: 0.4rem 1.6rem;
+}
+
+.contacts-left iframe {
+  width: 100%;
+  height: 16rem;
+  border-radius: 1rem;
+}
+
+.contacts-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.4rem 1.6rem;
+}
+
+.contacts-right .textInput input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid salmon;
+}
+
+.contactsFluid {
+  background: -webkit-gradient(linear, left top, right top, from(#d9756c), color-stop(35%, #ffbda7), to(#fff3b6));
+  background: linear-gradient(90deg, #d9756c 0%, #ffbda7 35%, #fff3b6 100%);
+  color: #414141;
+}
+
+.container .btnContacts a button {
+  background: salmon;
+}
+
+/*____________7.Prices____________*/
+.prices {
+  height: 33.75rem;
+  padding-top: 9rem;
+}
+
+/*____________8.Cv____________*/
+.cv {
+  height: 33.75rem;
+  padding-top: 9rem;
+}
+
+.cvLeft ul li {
+  border-bottom-style: solid;
+  border-width: 2px;
+  margin: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.8em;
+}
+
+.cvLeft .fa {
+  font-size: 1.5em;
+}
+
+.cvLeft tr td {
+  width: 50%;
+}
+
+.cvCenter {
+  padding: 0 8%;
+  margin-top: -5%;
+}
+
+.cvCenter h2, .cvRight h2 {
+  font-weight: 900;
+  text-align: right;
+}
+
+.cvRight {
+  padding: 0 8%;
+  margin-top: 7rem;
+}
+
+.cvFriends {
+  z-index: 1;
+}
+
+.logofriends {
+  z-index: 2;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.logofriends img {
+  margin: 0.5rem;
+}
+
+/*____________9.Footer____________*/
+footer ul {
+  margin-bottom: 1.5rem;
+}
+
+footer img {
+  width: 6rem;
+  margin: 0.2rem 0;
+}
+
+footer .container-fluid .container a,
+footer .container-fluid .container p,
+footer .container-fluid .container h3,
+footer .container-fluid .container .fab {
+  color: #414141;
+}
+
+.copyright {
+  text-align: center;
+  margin: 1rem;
+}
+
+/*____________10.Mediaqueries & Grids____________*/
+/* No media query for `xs` since this is the default in Bootstrap */
+/* X-Small devices (portrait phones, less than 576px) */
+/* Small devices (landscape phones, 576px and 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .cvContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "cvCenter" "cvLeft" "cvFriends" "cvRight";
+  }
+  .cvLeft {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+  }
+  .brandKent {
+    position: absolute;
+    z-index: 3;
+    bottom: -1px;
+    right: -50%;
+  }
+  .brandKent img {
+    width: 50%;
+  }
+  .cvLeft {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: cvLeft;
+  }
+  .cvCenter {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: cvCenter;
+  }
+  .cvRight {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: cvRight;
+  }
+  .cvFriends {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: cvFriends;
+  }
+}
+
+/* Medium devices (tablets, 768px and 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .cvContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 35% 65%;
+        grid-template-columns: 35% 65%;
+    -ms-grid-rows: 40% 40% 20%;
+        grid-template-rows: 40% 40% 20%;
+        grid-template-areas: "cvCenter cvCenter" "cvLeft cvRight" "cvLeft cvFriends";
+  }
+  .cvLeft {
+    text-align: left;
+    padding: 0 0.5rem;
+  }
+  .brandKent {
+    position: absolute;
+    z-index: 3;
+    bottom: -1px;
+    right: -35%;
+  }
+  .brandKent img {
+    width: 80%;
+  }
+  .cvLeft {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: cvLeft;
+  }
+  .cvCenter {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: cvCenter;
+  }
+  .cvRight {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: cvRight;
+  }
+  .cvFriends {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: cvFriends;
+  }
+}
+
+/* Large devices (desktops, 992px and 1199px) */
+@media only screen and (min-width: 992px) {
+  .cvContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+        grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    -ms-grid-rows: 75% 25%;
+        grid-template-rows: 75% 25%;
+        grid-template-areas: "cvLeft cvLeft cvCenter cvCenter cvCenter cvRight cvRight cvRight" "cvLeft cvLeft cvFriends cvFriends cvFriends cvFriends cvFriends cvFriends";
+  }
+  .cvLeft {
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+  }
+  .brandKent {
+    position: absolute;
+    z-index: 3;
+    bottom: -1px;
+    right: 22%;
+  }
+  .cvLeft {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: cvLeft;
+  }
+  .cvCenter {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    grid-area: cvCenter;
+  }
+  .cvRight {
+    -ms-grid-row: 1;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 3;
+    grid-area: cvRight;
+  }
+  .cvFriends {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 6;
+    grid-area: cvFriends;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and 1399px) */
+/* XX-Large devices (larger desktops, 1400px and up) */
+/*# sourceMappingURL=main.css.map */
