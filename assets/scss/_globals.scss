@@ -1,63 +1,118 @@
 /*____________1. Global Styles____________*/
+
+$primary-color: #5e9dc6;
+$secondary-color: rgb(0, 97, 136);
+$primary-color-cta: rgba(84,58,183,1);
+$secondary-color-cta: rgb(50, 34, 114);
+$primary-color-contacts: salmon;
+$secondary-color-contacts: rgb(136, 63, 54);
+$terciary-color: white;
+$font-color: #ffffff;
+$box-shadow: 0 2px 10px 0 rgba(0,0,0,0.6);
+
 @font-face {font-family: "microgramma"; src: url("../typography/Microgramma.otf");}
-.fab {color: rgb(255, 255, 255); text-decoration: none; margin: 3px; font-size: 1rem; cursor: pointer; cursor: pointer;}
+
+.fab {color: rgb(255, 255, 255); text-decoration: none; margin: 3px; font-size: 1rem; cursor: pointer;}
+
 body {
     background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
 }
+
 h1 {
     font-size: 1.5em;
     font-weight: bold;
 }
+
 h2 {
     font-size: 1.2em;
     font-weight: 300;
 }
+
 p {
     font-size: 0.8em;
     margin: 1rem 0 1rem 0;
 }
-ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.8em;
+
+ul {
+    li {
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 0.8em;
+        }
+    }
 }
-button {
-    color: white;
+
+@mixin btn ($background-color, $color, $bold){
+    background-color: $background-color;  
+    color: $font-color;
     border: none;
+    border-radius: 0.7rem;
+    margin: 0.5rem;
     width: 8rem;
     height: 2rem;
     text-align: center;
     font-size: 14px;
+    @if($bold=='true'){
+        font-weight: bolder;
+    }
 }
+
+.simple-btn {
+    @include btn($primary-color, $terciary-color, 'false');
+    &:hover{
+        @include btn($secondary-color, $terciary-color, 'true');
+        box-shadow: $box-shadow;
+    }
+}
+
+.cta-btn {
+    @include btn($primary-color-cta, $terciary-color, 'false');
+    &:hover{
+        @include btn($secondary-color-cta, $terciary-color, 'true');
+        box-shadow: $box-shadow;
+    }
+}
+
+.contact-btn {
+    @include btn($primary-color-contacts, $terciary-color, 'false');
+    &:hover{
+        @include btn($secondary-color-contacts, $terciary-color, 'true');
+        box-shadow: $box-shadow;
+    }
+}
+
 .container {
     justify-content: center; 
     padding: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
+
 .container h3 {
     font-size: 0.7em;
     font-weight: bold;
 }
+
 .container a, #navbarDropdown{
     text-decoration: none;
     color: white;
     font-weight: bold;
     font-size: 0.8em;
 }
+
 .container ul {
     padding-left: 0;
 }
-.container button {
-    background-color: rgba(11, 8, 36, 0.842);
-    border-radius: 0.7rem;
-}
+
 .logoFilter {
     filter: invert(75%);
 }
+
 .navbar-nav li a{
     color: darkslategrey;
 }
+
 .dropdown-menu li a {
     color: darkslategrey;
 }

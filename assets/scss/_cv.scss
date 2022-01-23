@@ -3,32 +3,36 @@
     height: 33.75rem;
     padding-top: 9rem;
 }
-.cvLeft ul li {
+.cv-left ul li {
     border-bottom-style: solid;
     border-width: 2px;
     margin: 0.5rem;
     padding: 0.5rem 0;
     font-size: 0.8em;
 }
-.cvLeft .fa {
+.cv-left .fa {
     font-size: 1.5em;
 }
-.cvLeft tr td {
+.cv-left tr td {
     width: 50%;
 }
-.cvCenter {
+.cv-center {
+    background-size: cover;
     padding: 0 8%;
     margin-top: -5%;
 }
-.cvCenter h2, .cvRight h2 {
+.cv-center h2, .cv-right h2 {
     font-weight: 900;
     text-align: right;
 }
-.cvRight {
-    padding: 0 8%;
-    margin-top: 7rem;
+.cv-center-bar {
+    background: linear-gradient(60deg, rgb(30, 19, 71) 0%, rgb(6, 62, 70) 100%);
 }
-.cvFriends {
+.cv-right {
+    padding: 0 8%;
+    margin-top: 5rem;
+}
+.cv-friends {
     z-index:1;
 }
 .logofriends {

@@ -74,7 +74,6 @@ input {
   margin: 3px;
   font-size: 1rem;
   cursor: pointer;
-  cursor: pointer;
 }
 
 body {
@@ -102,13 +101,85 @@ ul li a {
   font-size: 0.8em;
 }
 
-button {
-  color: white;
+.simple-btn {
+  background-color: #5e9dc6;
+  color: #ffffff;
   border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
   width: 8rem;
   height: 2rem;
   text-align: center;
   font-size: 14px;
+}
+
+.simple-btn:hover {
+  background-color: #006188;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cta-btn {
+  background-color: #543ab7;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cta-btn:hover {
+  background-color: #322272;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.contact-btn {
+  background-color: salmon;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background-color: #883f36;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
 }
 
 .container {
@@ -134,11 +205,6 @@ button {
 
 .container ul {
   padding-left: 0;
-}
-
-.container button {
-  background-color: rgba(11, 8, 36, 0.842);
-  border-radius: 0.7rem;
 }
 
 .logoFilter {
@@ -295,6 +361,12 @@ main {
           filter: opacity(80);
 }
 
+/*____________5.Solutions____________*/
+.solutions {
+  height: 33.75rem;
+  padding-top: 9rem;
+}
+
 /*____________4.Projects____________*/
 .projects {
   height: 33.75rem;
@@ -380,7 +452,7 @@ main {
   padding-top: 9rem;
 }
 
-.cvLeft ul li {
+.cv-left ul li {
   border-bottom-style: solid;
   border-width: 2px;
   margin: 0.5rem;
@@ -388,30 +460,35 @@ main {
   font-size: 0.8em;
 }
 
-.cvLeft .fa {
+.cv-left .fa {
   font-size: 1.5em;
 }
 
-.cvLeft tr td {
+.cv-left tr td {
   width: 50%;
 }
 
-.cvCenter {
+.cv-center {
+  background-size: cover;
   padding: 0 8%;
   margin-top: -5%;
 }
 
-.cvCenter h2, .cvRight h2 {
+.cv-center h2, .cv-right h2 {
   font-weight: 900;
   text-align: right;
 }
 
-.cvRight {
-  padding: 0 8%;
-  margin-top: 7rem;
+.cv-center-bar {
+  background: linear-gradient(60deg, #1e1347 0%, #063e46 100%);
 }
 
-.cvFriends {
+.cv-right {
+  padding: 0 8%;
+  margin-top: 5rem;
+}
+
+.cv-friends {
   z-index: 1;
 }
 
@@ -470,9 +547,9 @@ footer .container-fluid .container .fab {
     display: grid;
     -ms-grid-rows: auto auto auto auto;
         grid-template-rows: auto auto auto auto;
-        grid-template-areas: "cvCenter" "cvLeft" "cvFriends" "cvRight";
+        grid-template-areas: "cv-center" "cv-left" "cv-friends" "cv-right";
   }
-  .cvLeft {
+  .cv-left {
     text-align: left;
     padding: 0.5rem 0.5rem;
   }
@@ -485,25 +562,25 @@ footer .container-fluid .container .fab {
   .brandKent img {
     width: 50%;
   }
-  .cvLeft {
+  .cv-left {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    grid-area: cvLeft;
+    grid-area: cv-left;
   }
-  .cvCenter {
+  .cv-center {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: cvCenter;
+    grid-area: cv-center;
   }
-  .cvRight {
+  .cv-right {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
-    grid-area: cvRight;
+    grid-area: cv-right;
   }
-  .cvFriends {
+  .cv-friends {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    grid-area: cvFriends;
+    grid-area: cv-friends;
   }
 }
 
@@ -516,9 +593,9 @@ footer .container-fluid .container .fab {
         grid-template-columns: 35% 65%;
     -ms-grid-rows: 40% 40% 20%;
         grid-template-rows: 40% 40% 20%;
-        grid-template-areas: "cvCenter cvCenter" "cvLeft cvRight" "cvLeft cvFriends";
+        grid-template-areas: "cv-center cv-center" "cv-left cv-right" "cv-left cv-friends";
   }
-  .cvLeft {
+  .cv-left {
     text-align: left;
     padding: 0 0.5rem;
   }
@@ -531,27 +608,27 @@ footer .container-fluid .container .fab {
   .brandKent img {
     width: 80%;
   }
-  .cvLeft {
+  .cv-left {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
-    grid-area: cvLeft;
+    grid-area: cv-left;
   }
-  .cvCenter {
+  .cv-center {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-area: cvCenter;
+    grid-area: cv-center;
   }
-  .cvRight {
+  .cv-right {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-    grid-area: cvRight;
+    grid-area: cv-right;
   }
-  .cvFriends {
+  .cv-friends {
     -ms-grid-row: 3;
     -ms-grid-column: 2;
-    grid-area: cvFriends;
+    grid-area: cv-friends;
   }
 }
 
@@ -564,9 +641,9 @@ footer .container-fluid .container .fab {
         grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
     -ms-grid-rows: 75% 25%;
         grid-template-rows: 75% 25%;
-        grid-template-areas: "cvLeft cvLeft cvCenter cvCenter cvCenter cvRight cvRight cvRight" "cvLeft cvLeft cvFriends cvFriends cvFriends cvFriends cvFriends cvFriends";
+        grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-center cv-right cv-right" "cv-left cv-left cv-friends cv-friends cv-friends cv-friends cv-friends cv-friends";
   }
-  .cvLeft {
+  .cv-left {
     text-align: center;
     padding: 0.5rem 0.5rem;
   }
@@ -576,30 +653,30 @@ footer .container-fluid .container .fab {
     bottom: -1px;
     right: 22%;
   }
-  .cvLeft {
+  .cv-left {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
-    grid-area: cvLeft;
+    grid-area: cv-left;
   }
-  .cvCenter {
+  .cv-center {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
-    -ms-grid-column-span: 3;
-    grid-area: cvCenter;
+    -ms-grid-column-span: 4;
+    grid-area: cv-center;
   }
-  .cvRight {
+  .cv-right {
     -ms-grid-row: 1;
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 3;
-    grid-area: cvRight;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 2;
+    grid-area: cv-right;
   }
-  .cvFriends {
+  .cv-friends {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     -ms-grid-column-span: 6;
-    grid-area: cvFriends;
+    grid-area: cv-friends;
   }
 }
 
