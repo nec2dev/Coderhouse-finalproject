@@ -440,6 +440,16 @@ main {
   background: salmon;
 }
 
+.contactIlus {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.contactIlus img {
+  position: absolute;
+  margin-top: -2.5rem;
+}
+
 /*____________7.Prices____________*/
 .prices {
   height: 33.75rem;

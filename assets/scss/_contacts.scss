@@ -41,3 +41,11 @@
 .container .btnContacts a button {
     background: salmon;
 }
+.contactIlus {
+    border-radius: 1rem;
+    overflow: hidden;
+    img {
+        position: absolute;
+        margin-top: -2.5rem;
+    }
+}
