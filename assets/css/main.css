@@ -212,12 +212,12 @@ ul li a {
           filter: invert(75%);
 }
 
-.navbar-nav li a {
+.navbar-nav li a, .dropdown-menu li a {
   color: darkslategrey;
 }
 
-.dropdown-menu li a {
-  color: darkslategrey;
+.accordion-button:after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
 /*____________animations____________*/
@@ -291,6 +291,56 @@ ul li a {
     -webkit-transform: translate3d(85px, 0, 0);
             transform: translate3d(85px, 0, 0);
   }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+            transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider::before, .slider::after {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  position: absolute;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  -webkit-animation: scroll 60s linear infinite;
+          animation: scroll 60s linear infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*_____________2.Header: logo, navbar, searchbar_____________*/
@@ -519,10 +569,15 @@ main {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  overflow: hidden;
 }
 
 .logofriends img {
   margin: 0.5rem;
+}
+
+.brandKent {
+  margin-bottom: -0.5rem;
 }
 
 /*____________9.Footer____________*/

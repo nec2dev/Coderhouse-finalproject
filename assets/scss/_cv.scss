@@ -43,7 +43,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: end;
+    overflow: hidden;
 }
 .logofriends img {
     margin: 0.5rem;
+}
+.brandKent {
+    margin-bottom: -0.5rem;
 }

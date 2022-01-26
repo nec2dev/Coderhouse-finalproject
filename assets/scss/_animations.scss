@@ -7,3 +7,31 @@
 .parallax > use:nth-child(3) {animation-delay: -4s;animation-duration: 13s;}
 .parallax > use:nth-child(4) {animation-delay: -5s;animation-duration: 20s;}
 @keyframes move-forever { 0% {transform: translate3d(-90px,0,0);} 100% { transform: translate3d(85px,0,0);}}
+@mixin white-gradient {background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);}
+$animationSpeed: 60s;
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+.slider {	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		position: absolute;
+		z-index: 2;
+	}
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+	}
+}
