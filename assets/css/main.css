@@ -761,10 +761,6 @@ footer .container-fluid .container .fab {
 /*____________10.Mediaqueries & Grids____________*/
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
-.navbar-nav collapsed li {
-  margin-right: 6rem;
-}
-
 @media (max-width: 575px) {
   .cvContainer {
     display: -ms-grid;
@@ -850,10 +846,11 @@ footer .container-fluid .container .fab {
   .brandKent img {
     width: 80%;
   }
-  .navbar-nav {
-    background-color: rgba(141, 141, 141, 0.8);
+  #navbarSupportedContent {
+    background: rgba(141, 141, 141, 0.226);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
             backdrop-filter: saturate(180%) blur(10px);
+    border-radius: 1rem;
     padding: 1rem;
   }
 }

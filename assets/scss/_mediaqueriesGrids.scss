@@ -4,10 +4,8 @@
 @mixin  mobile {
     .cvContainer {display: grid; grid-template-columns: 100% 100% 100% 100%; grid-template-areas: "cv-left""cv-center""cv-friends""cv-right";}
     .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: 0; right:-35%;} .brandKent img {width: 60%;}  
-    #navbarSupportedContent {background: rgba(141, 141, 141, 0.226); backdrop-filter: saturate(180%) blur(10px); border-radius: 1rem; padding: 1rem;}}
-    .navbar-nav collapsed li {
-        margin-right: 6rem;
-    }
+    #navbarSupportedContent {background: rgba(141, 141, 141, 0.226); backdrop-filter: saturate(180%) blur(10px); border-radius: 1rem; padding: 1rem;}
+}
 @media (max-width: 575px) {
     @include mobile; 
 }
@@ -19,7 +17,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .cvContainer {display: grid; grid-template-columns: 35% 65%; grid-template-rows: 40% 40% 20%; grid-template-areas: "cv-center cv-center""cv-left cv-right""cv-left cv-friends";}
     .cv-left {text-align: left; padding: 0 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: 0; right:-35%;} .brandKent img {width: 80%;}
-    .navbar-nav {background-color: rgba(141, 141, 141, 0.8); backdrop-filter: saturate(180%) blur(10px); padding: 1rem;}
+    #navbarSupportedContent {background: rgba(141, 141, 141, 0.226); backdrop-filter: saturate(180%) blur(10px); border-radius: 1rem; padding: 1rem;}
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {
