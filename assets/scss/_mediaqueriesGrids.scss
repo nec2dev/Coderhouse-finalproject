@@ -1,25 +1,31 @@
 /*____________10.Mediaqueries & Grids____________*/
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
+@mixin  mobile {
+    .cvContainer {display: grid; grid-template-rows: auto auto auto auto; grid-template-areas: "cv-center""cv-left""cv-friends""cv-right";}
+    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right:-50%;} .brandKent img {width: 50%;}  
+    .navbar-nav {background: rgba(141, 141, 141, 0.8); backdrop-filter: saturate(180%) blur(10px);}
+}
+@media (max-width: 575px) {
+    @include mobile; 
+}
 /* Small devices (landscape phones, 576px and 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
-    .cvContainer {display: grid; grid-template-rows: auto auto auto auto; grid-template-areas: "cv-center""cv-left""cv-friends""cv-right";}
-    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right:-50%;} .brandKent img {width: 50%;}
-    .cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cv-friends {grid-area: cv-friends;}
+    @include mobile;
 }
 /* Medium devices (tablets, 768px and 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .cvContainer {display: grid; grid-template-columns: 35% 65%; grid-template-rows: 40% 40% 20%; grid-template-areas: "cv-center cv-center""cv-left cv-right""cv-left cv-friends";}
     .cv-left {text-align: left; padding: 0 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right:-35%;} .brandKent img {width: 80%;}
-    .cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cv-friends {grid-area: cv-friends;}
+    .navbar-nav {background-color: rgba(141, 141, 141, 0.8); backdrop-filter: saturate(180%) blur(10px); padding: 1rem;}
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {
     .cvContainer {display: grid; grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; grid-template-rows: 75% 25%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-center cv-right cv-right""cv-left cv-left cv-friends cv-friends cv-friends cv-friends cv-friends cv-friends";}
     .cv-left {text-align: center; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: -1px; right: 22%;}
-    .cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cv-friends {grid-area: cv-friends;}
 }
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */
+.cv-left {grid-area: cv-left} .cv-center {grid-area: cv-center} .cv-right {grid-area: cv-right} .cv-friends {grid-area: cv-friends;}
 
 

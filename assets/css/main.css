@@ -1,7 +1,7 @@
 /*[TABLE OF CONTENTS]
 0. Standard CSS Reset  
 1. Global Styles 
-2. Aimations & Transforms
+2. Aimations & Effects
 3. Header: logo, navbar, searchbar Main: presentation, facemenu, Logcard
 4. Solutions 
 5. Projects
@@ -220,7 +220,11 @@ ul li a {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
-/*____________animations____________*/
+.dropdown-menu {
+  margin-right: -1rem;
+}
+
+/*____________animations & effects____________*/
 #canvas {
   position: absolute;
   top: 0;
@@ -341,6 +345,173 @@ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.glitch {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: url(../img/cvnah.png);
+  background-repeat: no-repeat;
+  margin: 0 auto 0 auto;
+  overflow: hidden;
+}
+
+.glitch:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 180px;
+  background: url(../img/cvnah.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  opacity: .5;
+  mix-blend-mode: hard-light;
+  -webkit-animation: glitch2 10s linear infinite;
+          animation: glitch2 10s linear infinite;
+}
+
+.glitch:hover:before {
+  -webkit-animation: glitch1 1s linear infinite;
+          animation: glitch1 1s linear infinite;
+}
+
+@-webkit-keyframes glitch1 {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 5px 0;
+  }
+  20% {
+    background-position: -5px 0;
+  }
+  30% {
+    background-position: 15px 0;
+  }
+  40% {
+    background-position: -5px 0;
+  }
+  50% {
+    background-position: -25px 0;
+  }
+  60% {
+    background-position: -50px 0;
+  }
+  70% {
+    background-position: 0 -20px;
+  }
+  80% {
+    background-position: -60px -20px;
+  }
+  81% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes glitch1 {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 5px 0;
+  }
+  20% {
+    background-position: -5px 0;
+  }
+  30% {
+    background-position: 15px 0;
+  }
+  40% {
+    background-position: -5px 0;
+  }
+  50% {
+    background-position: -25px 0;
+  }
+  60% {
+    background-position: -50px 0;
+  }
+  70% {
+    background-position: 0 -20px;
+  }
+  80% {
+    background-position: -60px -20px;
+  }
+  81% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@-webkit-keyframes glitch2 {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 15px 0;
+  }
+  15% {
+    background-position: -15px 0;
+  }
+  20% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+  25% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  10% {
+    background-position: 15px 0;
+  }
+  15% {
+    background-position: -15px 0;
+  }
+  20% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+  25% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    background-position: 0 0;
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
 }
 
 /*_____________2.Header: logo, navbar, searchbar_____________*/
@@ -605,6 +776,34 @@ footer .container-fluid .container .fab {
 /*____________10.Mediaqueries & Grids____________*/
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  .cvContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "cv-center" "cv-left" "cv-friends" "cv-right";
+  }
+  .cv-left {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+  }
+  .brandKent {
+    position: absolute;
+    z-index: 3;
+    bottom: -1px;
+    right: -50%;
+  }
+  .brandKent img {
+    width: 50%;
+  }
+  .navbar-nav {
+    background: rgba(141, 141, 141, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+            backdrop-filter: saturate(180%) blur(10px);
+  }
+}
+
 /* Small devices (landscape phones, 576px and 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
   .cvContainer {
@@ -627,25 +826,10 @@ footer .container-fluid .container .fab {
   .brandKent img {
     width: 50%;
   }
-  .cv-left {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: cv-left;
-  }
-  .cv-center {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: cv-center;
-  }
-  .cv-right {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: cv-right;
-  }
-  .cv-friends {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: cv-friends;
+  .navbar-nav {
+    background: rgba(141, 141, 141, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+            backdrop-filter: saturate(180%) blur(10px);
   }
 }
 
@@ -673,27 +857,11 @@ footer .container-fluid .container .fab {
   .brandKent img {
     width: 80%;
   }
-  .cv-left {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    grid-area: cv-left;
-  }
-  .cv-center {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: cv-center;
-  }
-  .cv-right {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: cv-right;
-  }
-  .cv-friends {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-area: cv-friends;
+  .navbar-nav {
+    background-color: rgba(141, 141, 141, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+            backdrop-filter: saturate(180%) blur(10px);
+    padding: 1rem;
   }
 }
 
@@ -718,33 +886,23 @@ footer .container-fluid .container .fab {
     bottom: -1px;
     right: 22%;
   }
-  .cv-left {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: cv-left;
-  }
-  .cv-center {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 4;
-    grid-area: cv-center;
-  }
-  .cv-right {
-    -ms-grid-row: 1;
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 2;
-    grid-area: cv-right;
-  }
-  .cv-friends {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 6;
-    grid-area: cv-friends;
-  }
 }
 
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */
+.cv-left {
+  grid-area: cv-left;
+}
+
+.cv-center {
+  grid-area: cv-center;
+}
+
+.cv-right {
+  grid-area: cv-right;
+}
+
+.cv-friends {
+  grid-area: cv-friends;
+}
 /*# sourceMappingURL=main.css.map */
