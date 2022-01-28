@@ -340,8 +340,8 @@ ul li a {
 }
 
 .slider .slide-track {
-  -webkit-animation: scroll 60s linear infinite;
-          animation: scroll 60s linear infinite;
+  -webkit-animation: scroll 80s linear infinite;
+          animation: scroll 80s linear infinite;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

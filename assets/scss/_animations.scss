@@ -8,7 +8,7 @@
 .parallax > use:nth-child(4) {animation-delay: -5s;animation-duration: 20s;}
 @keyframes move-forever { 0% {transform: translate3d(-90px,0,0);} 100% { transform: translate3d(85px,0,0);}}
 @mixin white-gradient {background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);}
-$animationSpeed: 60s;
+$animationSpeed: 80s;
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(calc(-250px * 7))}
