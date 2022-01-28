@@ -1,11 +1,8 @@
 /*_____________2.Header: logo, navbar, searchbar_____________*/
 header {
-    background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
+    background-image: url(../img/background_space_header.png); background-repeat: no-repeat; background-position: top; 
     height: 6rem;
     position: relative;
-}
-header .container img {
-    width: 80%;
 }
 header .container input {
     border-radius: 2em;

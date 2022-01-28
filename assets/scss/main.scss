@@ -18,7 +18,7 @@
 /*____________3.Main: presentation,facemenu,logcard____________*/
 main {
     background-image: url(../img/background_space.png); background-repeat: no-repeat; background-position: top;
-    height: 58.5rem;
+    height: 67.5rem;
     padding-top: 9rem;
 }
 .mainPresentation {
@@ -26,6 +26,7 @@ main {
 }
 .mainFacemenu {
     text-align: center;
+    margin: 2rem 0;
 }
 .mainFacemenu a {
     text-decoration: none;

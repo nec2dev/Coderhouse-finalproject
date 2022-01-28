@@ -196,7 +196,7 @@ ul li a {
   font-weight: bold;
 }
 
-.container a, #navbarDropdown {
+.container a, .container #navbarDropdown {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -345,6 +345,10 @@ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.slider .slide-track img {
+  margin: 1rem;
 }
 
 .glitch {
@@ -516,15 +520,11 @@ ul li a {
 
 /*_____________2.Header: logo, navbar, searchbar_____________*/
 header {
-  background-image: url(../img/background_space.png);
+  background-image: url(../img/background_space_header.png);
   background-repeat: no-repeat;
   background-position: top;
   height: 6rem;
   position: relative;
-}
-
-header .container img {
-  width: 80%;
 }
 
 header .container input {
@@ -553,7 +553,7 @@ main {
   background-image: url(../img/background_space.png);
   background-repeat: no-repeat;
   background-position: top;
-  height: 58.5rem;
+  height: 67.5rem;
   padding-top: 9rem;
 }
 
@@ -563,6 +563,7 @@ main {
 
 .mainFacemenu {
   text-align: center;
+  margin: 2rem 0;
 }
 
 .mainFacemenu a {
@@ -679,30 +680,26 @@ main {
 
 /*____________8.Cv____________*/
 .cv {
-  height: 33.75rem;
-  padding-top: 9rem;
+  height: auto;
 }
 
 .cv-left ul li {
   border-bottom-style: solid;
   border-width: 2px;
-  margin: 0.5rem;
   padding: 0.5rem 0;
   font-size: 0.8em;
 }
 
 .cv-left .fa {
   font-size: 1.5em;
-}
-
-.cv-left tr td {
-  width: 50%;
+  margin: 0.3rem;
 }
 
 .cv-center {
-  background-size: cover;
-  padding: 0 8%;
-  margin-top: -5%;
+  background: linear-gradient(60deg, #1e1347 0%, #063e46 100%);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
 }
 
 .cv-center h2, .cv-right h2 {
@@ -710,17 +707,13 @@ main {
   text-align: right;
 }
 
-.cv-center-bar {
-  background: linear-gradient(60deg, #1e1347 0%, #063e46 100%);
-}
-
 .cv-right {
-  padding: 0 8%;
-  margin-top: 5rem;
+  padding: 1rem;
 }
 
 .cv-friends {
   z-index: 1;
+  margin: 1rem;
 }
 
 .logofriends {
@@ -737,18 +730,10 @@ main {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   overflow: hidden;
-}
-
-.logofriends img {
-  margin: 0.5rem;
-}
-
-.brandKent {
-  margin-bottom: -0.5rem;
 }
 
 /*____________9.Footer____________*/
@@ -776,13 +761,17 @@ footer .container-fluid .container .fab {
 /*____________10.Mediaqueries & Grids____________*/
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
+.navbar-nav collapsed li {
+  margin-right: 6rem;
+}
+
 @media (max-width: 575px) {
   .cvContainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto auto auto auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "cv-center" "cv-left" "cv-friends" "cv-right";
+    -ms-grid-columns: 100% 100% 100% 100%;
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
   }
   .cv-left {
     text-align: left;
@@ -791,16 +780,18 @@ footer .container-fluid .container .fab {
   .brandKent {
     position: absolute;
     z-index: 3;
-    bottom: -1px;
-    right: -50%;
+    bottom: 0;
+    right: -35%;
   }
   .brandKent img {
-    width: 50%;
+    width: 60%;
   }
-  .navbar-nav {
-    background: rgba(141, 141, 141, 0.8);
+  #navbarSupportedContent {
+    background: rgba(141, 141, 141, 0.226);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
             backdrop-filter: saturate(180%) blur(10px);
+    border-radius: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -809,9 +800,9 @@ footer .container-fluid .container .fab {
   .cvContainer {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: auto auto auto auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "cv-center" "cv-left" "cv-friends" "cv-right";
+    -ms-grid-columns: 100% 100% 100% 100%;
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
   }
   .cv-left {
     text-align: left;
@@ -820,16 +811,18 @@ footer .container-fluid .container .fab {
   .brandKent {
     position: absolute;
     z-index: 3;
-    bottom: -1px;
-    right: -50%;
+    bottom: 0;
+    right: -35%;
   }
   .brandKent img {
-    width: 50%;
+    width: 60%;
   }
-  .navbar-nav {
-    background: rgba(141, 141, 141, 0.8);
+  #navbarSupportedContent {
+    background: rgba(141, 141, 141, 0.226);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
             backdrop-filter: saturate(180%) blur(10px);
+    border-radius: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -851,7 +844,7 @@ footer .container-fluid .container .fab {
   .brandKent {
     position: absolute;
     z-index: 3;
-    bottom: -1px;
+    bottom: 0;
     right: -35%;
   }
   .brandKent img {
@@ -883,7 +876,7 @@ footer .container-fluid .container .fab {
   .brandKent {
     position: absolute;
     z-index: 3;
-    bottom: -1px;
+    bottom: 0;
     right: 22%;
   }
 }

@@ -33,6 +33,9 @@ $animationSpeed: 60s;
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;
 		display: flex;
+		img {
+			margin: 1rem;
+		}
 	}
 }
 .glitch

@@ -2,10 +2,12 @@
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
 @mixin  mobile {
-    .cvContainer {display: grid; grid-template-rows: auto auto auto auto; grid-template-areas: "cv-center""cv-left""cv-friends""cv-right";}
-    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right:-50%;} .brandKent img {width: 50%;}  
-    .navbar-nav {background: rgba(141, 141, 141, 0.8); backdrop-filter: saturate(180%) blur(10px);}
-}
+    .cvContainer {display: grid; grid-template-columns: 100% 100% 100% 100%; grid-template-areas: "cv-left""cv-center""cv-friends""cv-right";}
+    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: 0; right:-35%;} .brandKent img {width: 60%;}  
+    #navbarSupportedContent {background: rgba(141, 141, 141, 0.226); backdrop-filter: saturate(180%) blur(10px); border-radius: 1rem; padding: 1rem;}}
+    .navbar-nav collapsed li {
+        margin-right: 6rem;
+    }
 @media (max-width: 575px) {
     @include mobile; 
 }
@@ -16,13 +18,13 @@
 /* Medium devices (tablets, 768px and 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .cvContainer {display: grid; grid-template-columns: 35% 65%; grid-template-rows: 40% 40% 20%; grid-template-areas: "cv-center cv-center""cv-left cv-right""cv-left cv-friends";}
-    .cv-left {text-align: left; padding: 0 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: -1px; right:-35%;} .brandKent img {width: 80%;}
+    .cv-left {text-align: left; padding: 0 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: 0; right:-35%;} .brandKent img {width: 80%;}
     .navbar-nav {background-color: rgba(141, 141, 141, 0.8); backdrop-filter: saturate(180%) blur(10px); padding: 1rem;}
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {
     .cvContainer {display: grid; grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; grid-template-rows: 75% 25%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-center cv-right cv-right""cv-left cv-left cv-friends cv-friends cv-friends cv-friends cv-friends cv-friends";}
-    .cv-left {text-align: center; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: -1px; right: 22%;}
+    .cv-left {text-align: center; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: 0; right: 22%;}
 }
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */

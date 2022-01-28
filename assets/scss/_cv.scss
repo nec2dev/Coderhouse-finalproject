@@ -1,39 +1,37 @@
 /*____________8.Cv____________*/
 .cv {
-    height: 33.75rem;
-    padding-top: 9rem;
+    height: auto;
 }
-.cv-left ul li {
-    border-bottom-style: solid;
-    border-width: 2px;
-    margin: 0.5rem;
-    padding: 0.5rem 0;
-    font-size: 0.8em;
-}
+.cv-left {
+    ul{
+        li {
+            border-bottom-style: solid;
+            border-width: 2px;
+            padding: 0.5rem 0;
+            font-size: 0.8em;
+        }
+    }
+} 
 .cv-left .fa {
     font-size: 1.5em;
-}
-.cv-left tr td {
-    width: 50%;
+    margin: 0.3rem;
 }
 .cv-center {
-    background-size: cover;
-    padding: 0 8%;
-    margin-top: -5%;
+    background: linear-gradient(60deg, rgb(30, 19, 71) 0%, rgb(6, 62, 70) 100%);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
 }
 .cv-center h2, .cv-right h2 {
     font-weight: 900;
     text-align: right;
 }
-.cv-center-bar {
-    background: linear-gradient(60deg, rgb(30, 19, 71) 0%, rgb(6, 62, 70) 100%);
-}
 .cv-right {
-    padding: 0 8%;
-    margin-top: 5rem;
+    padding: 1rem;
 }
 .cv-friends {
     z-index:1;
+    margin: 1rem;
 }
 .logofriends {
     z-index:2;
@@ -42,12 +40,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: end;
+    align-items: baseline;
     overflow: hidden;
-}
-.logofriends img {
-    margin: 0.5rem;
-}
-.brandKent {
-    margin-bottom: -0.5rem;
 }
