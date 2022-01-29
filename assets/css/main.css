@@ -1,6 +1,6 @@
 /*[TABLE OF CONTENTS]
 0. Standard CSS Reset  
-1. Global Styles 
+1. Global Styles & Variables
 2. Aimations & Effects
 3. Header: logo, navbar, searchbar Main: presentation, facemenu, Logcard
 4. Solutions 
@@ -62,7 +62,7 @@ input {
   border-radius: 0;
 }
 
-/*____________1. Global Styles____________*/
+/*____________1. Global Styles & Variables____________*/
 @font-face {
   font-family: "microgramma";
   src: url("../typography/Microgramma.otf");
@@ -213,7 +213,7 @@ ul li a {
 }
 
 .navbar-nav li a, .dropdown-menu li a {
-  color: darkslategrey;
+  color: #006188;
 }
 
 .accordion-button:after {
@@ -353,12 +353,10 @@ ul li a {
 
 .glitch {
   position: relative;
-  width: 180px;
+  width: 263px;
   height: 180px;
   background: url(../img/cvnah.png);
   background-repeat: no-repeat;
-  margin: 0 auto 0 auto;
-  overflow: hidden;
 }
 
 .glitch:before {
@@ -366,7 +364,7 @@ ul li a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 180px;
+  width: 263px;
   height: 180px;
   background: url(../img/cvnah.png);
   background-size: auto;
@@ -531,17 +529,20 @@ header .container input {
   border-radius: 2em;
   outline: solid rgba(255, 255, 255, 0.534);
   background-color: white;
-  color: #494949;
+  color: #006188;
   height: 1.2rem;
   font-weight: bold;
   font-size: 0.8em;
 }
 
-header .container-fluid .container a,
-header .container-fluid .container p,
-header .container-fluid .container h3,
-header .container-fluid .container .fab {
-  color: #414141;
+header .container input .container-fluid .container a,
+header .container input .container-fluid .container p,
+header .container input .container-fluid .container h3 {
+  color: #006188;
+}
+
+header .container input .container-fluid .container .fab {
+  color: #006188;
 }
 
 .headerNoImage {
@@ -583,13 +584,13 @@ main {
           filter: opacity(80);
 }
 
-/*____________5.Solutions____________*/
+/*____________4.Solutions____________*/
 .solutions {
   height: 33.75rem;
   padding-top: 9rem;
 }
 
-/*____________4.Projects____________*/
+/*____________5.Projects____________*/
 .projects {
   height: 33.75rem;
   padding-top: 9rem;
@@ -746,10 +747,7 @@ footer img {
   margin: 0.2rem 0;
 }
 
-footer .container-fluid .container a,
-footer .container-fluid .container p,
-footer .container-fluid .container h3,
-footer .container-fluid .container .fab {
+footer .container-fluid .container a, footer .container-fluid .container p, footer .container-fluid .container h3, footer .container-fluid .container .fab {
   color: #414141;
 }
 
@@ -762,13 +760,6 @@ footer .container-fluid .container .fab {
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-  .cvContainer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100% 100% 100% 100%;
-        grid-template-columns: 100% 100% 100% 100%;
-        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
-  }
   .cv-left {
     text-align: left;
     padding: 0.5rem 0.5rem;
@@ -788,18 +779,18 @@ footer .container-fluid .container .fab {
             backdrop-filter: saturate(180%) blur(10px);
     border-radius: 1rem;
     padding: 1rem;
+  }
+  .cvContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100% 100% 100% 100%;
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
   }
 }
 
 /* Small devices (landscape phones, 576px and 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
-  .cvContainer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100% 100% 100% 100%;
-        grid-template-columns: 100% 100% 100% 100%;
-        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
-  }
   .cv-left {
     text-align: left;
     padding: 0.5rem 0.5rem;
@@ -820,10 +811,37 @@ footer .container-fluid .container .fab {
     border-radius: 1rem;
     padding: 1rem;
   }
+  .cvContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100% 100% 100% 100%;
+        grid-template-columns: 100% 100% 100% 100%;
+        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
+  }
 }
 
 /* Medium devices (tablets, 768px and 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
+  .cv-left {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+  }
+  .brandKent {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: -35%;
+  }
+  .brandKent img {
+    width: 60%;
+  }
+  #navbarSupportedContent {
+    background: rgba(141, 141, 141, 0.226);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+            backdrop-filter: saturate(180%) blur(10px);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
   .cvContainer {
     display: -ms-grid;
     display: grid;
@@ -833,25 +851,8 @@ footer .container-fluid .container .fab {
         grid-template-rows: 40% 40% 20%;
         grid-template-areas: "cv-center cv-center" "cv-left cv-right" "cv-left cv-friends";
   }
-  .cv-left {
-    text-align: left;
-    padding: 0 0.5rem;
-  }
-  .brandKent {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    right: -35%;
-  }
   .brandKent img {
     width: 80%;
-  }
-  #navbarSupportedContent {
-    background: rgba(141, 141, 141, 0.226);
-    -webkit-backdrop-filter: saturate(180%) blur(10px);
-            backdrop-filter: saturate(180%) blur(10px);
-    border-radius: 1rem;
-    padding: 1rem;
   }
 }
 

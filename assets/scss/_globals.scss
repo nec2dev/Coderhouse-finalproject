@@ -1,5 +1,4 @@
-/*____________1. Global Styles____________*/
-
+/*____________1. Global Styles & Variables____________*/
 $primary-color: #5e9dc6;
 $secondary-color: rgb(0, 97, 136);
 $primary-color-cta: rgba(84,58,183,1);
@@ -9,40 +8,33 @@ $secondary-color-contacts: rgb(136, 63, 54);
 $terciary-color: white;
 $font-color: #ffffff;
 $box-shadow: 0 2px 10px 0 rgba(0,0,0,0.6);
-
+$animationSpeed: 80s;
 @font-face {font-family: "microgramma"; src: url("../typography/Microgramma.otf");}
-
-.fab {color: rgb(255, 255, 255); text-decoration: none; margin: 3px; font-size: 1rem; cursor: pointer;}
-
+.fab {color: $terciary-color; text-decoration: none; margin: 3px; font-size: 1rem; cursor: pointer;}
 body {
     background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
 }
-
 h1 {
     font-size: 1.5em;
     font-weight: bold;
 }
-
 h2 {
     font-size: 1.2em;
     font-weight: 300;
 }
-
 p {
     font-size: 0.8em;
     margin: 1rem 0 1rem 0;
 }
-
 ul {
     li {
         a{
             text-decoration: none;
-            color: white;
+            color: $terciary-color;
             font-size: 0.8em;
         }
     }
 }
-
 @mixin btn ($background-color, $color, $bold){
     background-color: $background-color;  
     color: $font-color;
@@ -57,7 +49,6 @@ ul {
         font-weight: bolder;
     }
 }
-
 .simple-btn {
     @include btn($primary-color, $terciary-color, 'false');
     &:hover{
@@ -65,7 +56,6 @@ ul {
         box-shadow: $box-shadow;
     }
 }
-
 .cta-btn {
     @include btn($primary-color-cta, $terciary-color, 'false');
     &:hover{
@@ -73,7 +63,6 @@ ul {
         box-shadow: $box-shadow;
     }
 }
-
 .contact-btn {
     @include btn($primary-color-contacts, $terciary-color, 'false');
     &:hover{
@@ -81,19 +70,18 @@ ul {
         box-shadow: $box-shadow;
     }
 }
-
 .container {
     justify-content: center; 
     padding: 1.5rem;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: $terciary-color;
     h3 {
         font-size: 0.7em;
         font-weight: bold;
     }
     a, #navbarDropdown {
         text-decoration: none;
-        color: white;
+        color: $terciary-color;
         font-weight: bold;
         font-size: 0.8em;
     }
@@ -104,9 +92,8 @@ ul {
 .logoFilter {
     filter: invert(75%);
 }
-
 .navbar-nav li a, .dropdown-menu li a{
-    color: darkslategrey;
+    color: $secondary-color;
 }
 .accordion-button:after {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;

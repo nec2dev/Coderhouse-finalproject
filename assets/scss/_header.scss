@@ -1,24 +1,30 @@
 /*_____________2.Header: logo, navbar, searchbar_____________*/
 header {
-    background-image: url(../img/background_space_header.png); background-repeat: no-repeat; background-position: top; 
-    height: 6rem;
-    position: relative;
-}
-header .container input {
+  background-image: url(../img/background_space_header.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 6rem;
+  position: relative;
+  .container input {
     border-radius: 2em;
     outline: solid rgba(255, 255, 255, 0.534);
-    background-color: rgb(255, 255, 255);
-    color: rgb(73, 73, 73);
+    background-color: $terciary-color;
+    color: $secondary-color;
     height: 1.2rem;
     font-weight: bold;
     font-size: 0.8em;
-}
-header .container-fluid .container a,
-header .container-fluid .container p,
-header .container-fluid .container h3, 
-header .container-fluid .container .fab {
-    color: rgb(65, 65, 65);
+    .container-fluid .container {
+      a,
+      p,
+      h3 {
+        color: $secondary-color;
+      }
+      .fab {
+        color: $secondary-color;
+      }
+    }
+  }
 }
 .headerNoImage {
-    background-image: none;
+  background-image: none;
 }

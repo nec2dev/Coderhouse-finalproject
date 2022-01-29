@@ -1,6 +1,6 @@
 /*[TABLE OF CONTENTS]
 0. Standard CSS Reset  
-1. Global Styles 
+1. Global Styles & Variables
 2. Aimations & Effects
 3. Header: logo, navbar, searchbar Main: presentation, facemenu, Logcard
 4. Solutions 
@@ -10,10 +10,7 @@
 8. Cv
 9. Footer, copyright
 10. Mediaqueries & Grids*/
-
-@import 'reset';
-@import 'globals';
-@import 'animations';
+@import 'reset', 'globals', 'animations';
 @import 'header';
 /*____________3.Main: presentation,facemenu,logcard____________*/
 main {
@@ -42,10 +39,116 @@ main {
     padding: 1rem;
     filter: opacity(80);
 }
-@import 'solutions';
-@import 'projects';
-@import 'contacts';
-@import 'prices';
-@import 'cv';
+/*____________4.Solutions____________*/
+.solutions {
+    height: 33.75rem;
+    padding-top: 9rem;
+}
+/*____________5.Projects____________*/
+.projects {
+    height: 33.75rem;
+    padding-top: 9rem;
+}
+/*____________6.Contacts____________*/
+.contacts {
+    background-color: rgba(255, 219, 206, 0.575);-webkit-box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.75);
+    color: rgb(65, 65, 65);
+    border-radius: 1rem; 
+    margin: 5rem 0;  
+    padding: 0.8rem 1.6rem;
+}
+.contacts-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: salmon;
+    color: $terciary-color;
+    border-radius: 1rem;
+    padding: 0.4rem 1.6rem;
+}
+.contacts-left iframe {
+    width: 100%;
+    height: 16rem;
+    border-radius: 1rem;
+}
+.contacts-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.4rem 1.6rem;
+}
+.contacts-right .textInput input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid salmon;
+}
+.contactsFluid {
+    background: linear-gradient(90deg, rgba(217,117,108,1) 0%, rgba(255,189,167,1) 35%, rgba(255,243,182,1) 100%);
+    color: rgb(65, 65, 65);
+}
+.container .btnContacts a button {
+    background: salmon;
+}
+.contactIlus {
+    border-radius: 1rem;
+    overflow: hidden;
+    img {
+        position: absolute;
+        margin-top: -2.5rem;
+    }
+}
+/*____________7.Prices____________*/
+.prices {
+    height: 33.75rem;
+    padding-top: 9rem;
+}
+/*____________8.Cv____________*/
+.cv {
+    height: auto;
+}
+.cv-left {
+    ul{
+        li {
+            border-bottom-style: solid;
+            border-width: 2px;
+            padding: 0.5rem 0;
+            font-size: 0.8em;
+        }
+    }
+} 
+.cv-left .fa {
+    font-size: 1.5em;
+    margin: 0.3rem;
+}
+.cv-center {
+    background: linear-gradient(60deg, rgb(30, 19, 71) 0%, rgb(6, 62, 70) 100%);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.cv-center h2, .cv-right h2 {
+    font-weight: 900;
+    text-align: right;
+}
+.cv-right {
+    padding: 1rem;
+}
+.cv-friends {
+    z-index:1;
+    margin: 1rem;
+}
+.logofriends {
+    z-index:2;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    overflow: hidden;
+}
 @import 'footer';
 @import 'mediaqueriesGrids';
