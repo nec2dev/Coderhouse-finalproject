@@ -98,51 +98,52 @@
         <div class="container">
             <div class="row">
                 <!-- Acá empieza la presentación del sitio -->
-                <section class="mainPresentation col-sm-12 col-md-12 col-lg-3 col-xl-2">
-                    <h1>Effective and agile solutions for each stage of your project</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames
-                        gravida
-                        rutrum. Volutpat vel potenti senectus.</p>
-                </section>
+                <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3"></div>
                 <!--Acá comienza el face-menú, haciendo rollover sobre los íconos aparece un pop-up con la descripción-->
-                <section class="mainFacemenu col-sm-12 col-md-9 col-lg-6-align-middle col-xl-7">
-                    <img src="./assets/img/circularmenu.svg" alt="">
-                    <!-- <div class=""><a href="">ai</a></div>
-                    <div class=""><a href="">code</a></div>
-                    <div class=""><a href="">finances</a></div>
-                    <div class=""><a href="">audio</a></div>
-                    <div class=""><a href="">rout</a></div>
-                    <div class=""><a href="">cv</a></div>
-                    <div class=""><a href="">mkt</a></div>
-                    <div class=""><a href="">des</a></div>
-                    <div class=""><a href="">sets</a></div>
-                    <div class=""><a href="">av</a></div>
-                    <div class=""><a href="">health</a></div>
-                    <div class=""><a href="">arch</a></div>
-                    <div class=""><a href="">prod</a></div>
-                    <div class=""><a href="">web</a></div>
-                    <div class=""><a href="">accounts</a></div>
-                    <div class=""><a href="">art</a></div> -->
-                    <div class="mainContainer--controlslider">
-                </section>
-                <!--Esta es la parte del logueo-->
-                <aside class="mainLogcard col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <h4>Welcome to nec2 solutions</h4>
-                    <p>You discover the dazzling way of seeing your project born and grow</p>
-                    <a href=""><button type="button" class="cta-btn">Sign In</button></a>
-                    <a href=""><button type="button" class="cta-btn">Sign Up</button></a>
-                    <p>Or connect using</p>
-                    <div class="mainContainer--wrapper">
-                        <span><i class="fab fa-facebook-f"></i></span>
-                        <span><i class="fab fa-twitter"></i></span>
-                        <span><i class="fab fa-instagram"></i></span>
-                        <span><i class="fab fa-github"></i></span>
-                        <span><i class="fab fa-google"></i></span>
-                        <span><i class="fab fa-behance"></i></span>
+                <div class="mainFacemenu col-sm-12 col-md-9 col-lg-6 col-xl-6">
+                    <img src="./assets/img/spacefaceTest.png" alt="">
+                    <div class="row">
+                        <div class="form-check form-switch col-4">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                            <span><i class="fas fa-cubes"></i></span>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">3D</label>
+                        </div>
+                        <div class="form-check form-switch col-4">
+                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                        </div>
+                        <div class="col-4"></div>
                     </div>
-                    <a href=""><button type="button" class="simple-btn">Skip</button></a>
-                </aside>
+                </div>
+                <!--Esta es la parte del logueo-->
+                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                    <div class="mainLogcard">
+                        <h4>Welcome to nec2 solutions</h4>
+                        <p>You discover the dazzling way of seeing your project born and grow</p>
+                        <a href=""><button type="button" class="cta-btn">Sign In</button></a>
+                        <a href=""><button type="button" class="cta-btn">Sign Up</button></a>
+                        <p>Or connect using</p>
+                        <div class="mainContainer--wrapper">
+                            <span><i class="fab fa-facebook-f"></i></span>
+                            <span><i class="fab fa-twitter"></i></span>
+                            <span><i class="fab fa-instagram"></i></span>
+                            <span><i class="fab fa-github"></i></span>
+                            <span><i class="fab fa-google"></i></span>
+                            <span><i class="fab fa-behance"></i></span>
+                        </div>
+                        <a href=""><button type="button" class="simple-btn">Skip</button></a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="mainPresentation">
+                        <h1>Effective and agile solutions for each stage of your project</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames
+                            gravida
+                            rutrum. Volutpat vel potenti senectus.</p>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </main>
 
@@ -152,6 +153,7 @@
             <section class="projects col-sm-12 col-md-6 col-lg-6">
                 <h2>myProjects</h2>
                 <a href="./pages/projects.html"><button type="button" class="simple-btn">Projects</button></a>
+                <div><img src="./assets/img/solutionsilus.png" alt=""></div>
             </section>
             <section class="solutions col-sm-12 col-md-6 col-lg-6">
                 <h2>mySolutions</h2>
@@ -159,6 +161,7 @@
                     gravida
                     rutrum. Volutpat vel potenti senectus.</p>
                 <a href="./pages/solutions.html"><button type="button" class="simple-btn">Solutions</button></a>
+                <div><img src="./assets/img/solutionsilus.png" alt=""></div>
             </section>
         </div>
     </div>
@@ -166,20 +169,21 @@
     <!-- Contacts -->
     <div class="contactsFluid container-fluid">
         <div class="container">
-            <div class="row">
-                <section class="contacts col-12">
+            <section class="contacts row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
                     <h2>Contacts</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames gravida
-                        rutrum.
-                        Volutpat vel potenti senectus.</p>
-                    <a href="./pages/accounts.html"><button type="button" class="contact-btn">Contact me</button></a>
-                    <div>
-                        <p>+54 11 2 642 0901</p>
-                        <p>nec2@solutions.com</p>
-                        <p>3910 Saint Houston Street</p>
-                    </div>
-                </section>
-            </div>
+                    <p>contact me to know more about my proposals.</p>
+                    <a href="./pages/accounts.html"><button type="button" class="contact-btn">Contact
+                            me</button></a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-8"></div>
+                <div class="col-sm-12 col-md-3 col-lg-2">
+                    <p>+54 11 2 642 0901</p>
+                    <p>nec2@solutions.com</p>
+                    <p>3910 Saint Houston Street</p>
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-2"><img src="./assets/img/contactsilus.png" alt=""></div>
+            </section>
         </div>
     </div>
     <div class="contactsFluid">
@@ -189,7 +193,7 @@
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
                 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
                 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
@@ -204,10 +208,12 @@
                 <section class="cv col-sm-12 col-md-6 col-lg-6">
                     <h2 class="logoFilter">Cv</h2>
                     <a href="./pages/cv.html"><button type="button" class="simple-btn">View my resume</button></a>
+                    <img src="./assets/img/cvilus.png" alt="">
                 </section>
                 <section class="prices col-sm-12 col-md-6 col-lg-6">
                     <h2 class="logoFilter">Prices</h2>
                     <a href="./pages/prices.html"><button type="button" class="simple-btn">Ask for budget</button></a>
+                    <img src="./assets/img/pricesilus.png" alt="">
                 </section>
             </div>
         </div>

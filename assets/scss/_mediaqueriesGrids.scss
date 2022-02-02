@@ -8,22 +8,26 @@
 @media (max-width: 575px) {
     @include mobile;
     .cvContainer {display: grid; grid-template-columns: 100% 100% 100% 100%; grid-template-areas: "cv-left""cv-center""cv-friends""cv-right";}
+    .mainFacemenu img {width: 100%;}
 }
 /* Small devices (landscape phones, 576px and 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
     @include mobile;
     .cvContainer {display: grid; grid-template-columns: 100% 100% 100% 100%; grid-template-areas: "cv-left""cv-center""cv-friends""cv-right";}
+    .mainFacemenu img {width: 100%;}
 }
 /* Medium devices (tablets, 768px and 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     @include mobile;
     .cvContainer {display: grid; grid-template-columns: 35% 65%; grid-template-rows: 40% 40% 20%; grid-template-areas: "cv-center cv-center""cv-left cv-right""cv-left cv-friends";}
     .brandKent img {width: 80%;}
+    .mainFacemenu img {width: 110%;}
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {
     .cvContainer {display: grid; grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; grid-template-rows: 75% 25%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-center cv-right cv-right""cv-left cv-left cv-friends cv-friends cv-friends cv-friends cv-friends cv-friends";}
     .cv-left {text-align: center; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: 0; right: 22%;}
+    .mainFacemenu img {width: 120%; margin-left: -6rem; margin-top: -3rem;} 
 }
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */

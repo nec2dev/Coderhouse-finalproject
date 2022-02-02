@@ -124,8 +124,8 @@ ul li a {
   text-align: center;
   font-size: 14px;
   font-weight: bolder;
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
 }
 
 .cta-btn {
@@ -151,8 +151,8 @@ ul li a {
   text-align: center;
   font-size: 14px;
   font-weight: bolder;
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
 }
 
 .contact-btn {
@@ -178,8 +178,8 @@ ul li a {
   text-align: center;
   font-size: 14px;
   font-weight: bolder;
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
-          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
 }
 
 .container {
@@ -353,26 +353,28 @@ ul li a {
 
 .glitch {
   position: relative;
-  width: 263px;
+  width: 332px;
   height: 180px;
   background: url(../img/cvnah.png);
   background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .glitch:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 263px;
+  width: 332px;
   height: 180px;
   background: url(../img/cvnah.png);
   background-size: auto;
   background-repeat: no-repeat;
-  opacity: .5;
+  opacity: 0.5;
   mix-blend-mode: hard-light;
   -webkit-animation: glitch2 10s linear infinite;
           animation: glitch2 10s linear infinite;
+  z-index: -1;
 }
 
 .glitch:hover:before {
@@ -555,16 +557,13 @@ main {
   background-repeat: no-repeat;
   background-position: top;
   height: 67.5rem;
-  padding-top: 9rem;
-}
-
-.mainPresentation {
-  text-align: left;
+  padding-top: 7rem;
 }
 
 .mainFacemenu {
   text-align: center;
-  margin: 2rem 0;
+  height: auto;
+  overflow: visible;
 }
 
 .mainFacemenu a {
@@ -574,36 +573,45 @@ main {
   font-size: 1.3rem;
 }
 
+.mainFacemenu img {
+  position: relative;
+  z-index: 0;
+}
+
 .mainLogcard {
   background-image: linear-gradient(135deg, rgba(90, 107, 151, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
-  height: 100%;
   border-radius: 1rem;
   text-align: center;
-  padding: 1rem;
   -webkit-filter: opacity(80);
           filter: opacity(80);
+}
+
+.mainPresentation {
+  text-align: left;
+  max-width: 40rem;
+  z-index: 3;
 }
 
 /*____________4.Solutions____________*/
 .solutions {
   height: 33.75rem;
-  padding-top: 9rem;
+  padding-top: 4rem;
 }
 
 /*____________5.Projects____________*/
 .projects {
   height: 33.75rem;
-  padding-top: 9rem;
+  padding-top: 4rem;
 }
 
 /*____________6.Contacts____________*/
 .contacts {
-  background-color: rgba(255, 219, 206, 0.575);
-  -webkit-box-shadow: 0px 0px 24px 5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+  background-image: url(../img/contactwallpaper.png);
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
   color: #414141;
   border-radius: 1rem;
-  margin: 5rem 0;
+  margin: 5rem;
   padding: 0.8rem 1.6rem;
 }
 
@@ -671,12 +679,12 @@ main {
 .contactIlus img {
   position: absolute;
   margin-top: -2.5rem;
+  margin-left: -6rem;
 }
 
 /*____________7.Prices____________*/
 .prices {
   height: 33.75rem;
-  padding-top: 9rem;
 }
 
 /*____________8.Cv____________*/
@@ -738,6 +746,10 @@ main {
 }
 
 /*____________9.Footer____________*/
+footer {
+  padding-top: 5rem;
+}
+
 footer ul {
   margin-bottom: 1.5rem;
 }
@@ -787,6 +799,9 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
         grid-template-columns: 100% 100% 100% 100%;
         grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
   }
+  .mainFacemenu img {
+    width: 100%;
+  }
 }
 
 /* Small devices (landscape phones, 576px and 767px) */
@@ -817,6 +832,9 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     -ms-grid-columns: 100% 100% 100% 100%;
         grid-template-columns: 100% 100% 100% 100%;
         grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
+  }
+  .mainFacemenu img {
+    width: 100%;
   }
 }
 
@@ -854,6 +872,9 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
   .brandKent img {
     width: 80%;
   }
+  .mainFacemenu img {
+    width: 110%;
+  }
 }
 
 /* Large devices (desktops, 992px and 1199px) */
@@ -876,6 +897,11 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     z-index: 3;
     bottom: 0;
     right: 22%;
+  }
+  .mainFacemenu img {
+    width: 120%;
+    margin-left: -6rem;
+    margin-top: -3rem;
   }
 }
 

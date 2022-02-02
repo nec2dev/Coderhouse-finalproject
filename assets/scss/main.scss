@@ -16,46 +16,51 @@
 main {
     background-image: url(../img/background_space.webp); background-repeat: no-repeat; background-position: top;
     height: 67.5rem;
-    padding-top: 9rem;
-}
-.mainPresentation {
-    text-align: left;
+    padding-top: 7rem;
 }
 .mainFacemenu {
     text-align: center;
-    margin: 2rem 0;
-}
-.mainFacemenu a {
-    text-decoration: none;
+    height: auto;
+    overflow: visible;
+    a {
+        text-decoration: none;
     color: white;
     font-family: "microgramma";
     font-size: 1.3rem;
+    }
+    img {
+        position: relative;
+        z-index: 0;
+    }
 }
 .mainLogcard {
     background-image: linear-gradient(135deg, rgba(90, 107, 151, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
-    height: 100%;
     border-radius: 1rem; 
     text-align: center;
-    padding: 1rem;
     filter: opacity(80);
+}
+.mainPresentation {
+    text-align: left;
+    max-width: 40rem;
+    z-index: 3;
 }
 /*____________4.Solutions____________*/
 .solutions {
     height: 33.75rem;
-    padding-top: 9rem;
+    padding-top: 4rem;
 }
 /*____________5.Projects____________*/
 .projects {
     height: 33.75rem;
-    padding-top: 9rem;
+    padding-top: 4rem;
 }
 /*____________6.Contacts____________*/
 .contacts {
-    background-color: rgba(255, 219, 206, 0.575);-webkit-box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.75);-moz-box-shadow: 0px 0px 24px 5px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.75);
+    background-image: url(../img/contactwallpaper.png);
+    box-shadow: $box-shadow;
     color: rgb(65, 65, 65);
     border-radius: 1rem; 
-    margin: 5rem 0;  
+    margin: 5rem;  
     padding: 0.8rem 1.6rem;
 }
 .contacts-left {
@@ -98,12 +103,12 @@ main {
     img {
         position: absolute;
         margin-top: -2.5rem;
+        margin-left: -6rem;
     }
 }
 /*____________7.Prices____________*/
 .prices {
     height: 33.75rem;
-    padding-top: 9rem;
 }
 /*____________8.Cv____________*/
 .cv {
