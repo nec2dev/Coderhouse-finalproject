@@ -84,7 +84,7 @@
                         </ul>
                         <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <!-- <button class="btn btn-outline-info" type="submit">Search</button> -->
+                            <a class="fas fa-search" type="submit"></a>
                         </form>
                     </div>
                 </div>
@@ -100,23 +100,23 @@
                 <!-- Acá empieza la presentación del sitio -->
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3"></div>
                 <!--Acá comienza el face-menú, haciendo rollover sobre los íconos aparece un pop-up con la descripción-->
-                <div class="mainFacemenu col-sm-12 col-md-9 col-lg-6 col-xl-6">
+                <div class="mainFacemenu col-sm-12 col-md-8 col-lg-6 col-xl-6">
                     <img src="./assets/img/spacefaceTest.png" alt="">
                     <div class="row">
-                        <div class="form-check form-switch col-4">
+                        <div class="form-check form-switch col-2">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                             <span><i class="fas fa-cubes"></i></span>
                             <label class="form-check-label" for="flexSwitchCheckDefault">3D</label>
                         </div>
-                        <div class="form-check form-switch col-4">
+                        <div class="form-check form-switch col-2">
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
                             <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
                         </div>
-                        <div class="col-4"></div>
+                        <div class="col-8"></div>
                     </div>
                 </div>
                 <!--Esta es la parte del logueo-->
-                <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-sm-12 col-md-4 col-lg-3 col-xl-3">
                     <div class="mainLogcard">
                         <h4>Welcome to nec2 solutions</h4>
                         <p>You discover the dazzling way of seeing your project born and grow</p>
@@ -148,21 +148,23 @@
     </main>
 
     <!-- Projects-solutions -->
-    <div class="container">
-        <div class="row">
-            <section class="projects col-sm-12 col-md-6 col-lg-6">
-                <h2>myProjects</h2>
-                <a href="./pages/projects.html"><button type="button" class="simple-btn">Projects</button></a>
-                <div><img src="./assets/img/solutionsilus.png" alt=""></div>
-            </section>
-            <section class="solutions col-sm-12 col-md-6 col-lg-6">
-                <h2>mySolutions</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames
-                    gravida
-                    rutrum. Volutpat vel potenti senectus.</p>
-                <a href="./pages/solutions.html"><button type="button" class="simple-btn">Solutions</button></a>
-                <div><img src="./assets/img/solutionsilus.png" alt=""></div>
-            </section>
+    <div class="projectsback">
+        <div class="container">
+            <div class="row">
+                <section class="projects col-sm-12 col-md-6 col-lg-6">
+                    <h2>myProjects</h2>
+                    <a href="./pages/projects.html"><button type="button" class="simple-btn">Projects</button></a>
+                    <div><img src="./assets/img/projectilus.png" alt=""></div>
+                </section>
+                <section class="solutions col-sm-12 col-md-6 col-lg-6">
+                    <h2>mySolutions</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit sem mus interdum, congue fames
+                        gravida
+                        rutrum. Volutpat vel potenti senectus.</p>
+                    <a href="./pages/solutions.html"><button type="button" class="simple-btn">Solutions</button></a>
+                    <div><img src="./assets/img/solutionsilus.png" alt=""></div>
+                </section>
+            </div>
         </div>
     </div>
 
@@ -212,12 +214,14 @@
                 </section>
                 <section class="prices col-sm-12 col-md-6 col-lg-6">
                     <h2 class="logoFilter">Prices</h2>
-                    <a href="./pages/prices.html"><button type="button" class="simple-btn">Ask for budget</button></a>
+                    <a href="./pages/prices.html"><button type="button" class="simple-btn">Ask for
+                            budget</button></a>
                     <img src="./assets/img/pricesilus.png" alt="">
                 </section>
             </div>
         </div>
     </div>
+
     <!--Footer,copyright-->
     <footer class="container">
         <div class="row">
