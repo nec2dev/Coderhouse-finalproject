@@ -79,6 +79,7 @@
   }
 }
 .glitc {
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -96,8 +97,8 @@
 .glitched {
   @extend .glitch;
   background: url(../img/BrandKentNah.png);
-  width: 508px;
-  height: 600px;
+  width: 381px;
+  height: 450px;
 }
 .glitch:before {
   @extend .glitc;
@@ -113,8 +114,8 @@
 .glitched:before {
   @extend .glitch:before;
   background: url(../img/BrandKentNah.png);
-  width: 508px;
-  height: 600px;
+  width: 381px;
+  height: 450px;
 }
 
 .glitch:hover:before,

@@ -351,33 +351,49 @@ ul li a {
   margin: 1rem;
 }
 
-.glitch {
-  position: relative;
-  width: 332px;
-  height: 180px;
-  background: url(../img/cvnah.png);
+.glitc, .glitch, .glitched, .glitch:before, .glitched:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
-.glitch:before {
+.glitch, .glitched {
+  background: url(../img/cvnah.png);
+  width: 332px;
+  height: 180px;
+}
+
+.glitched {
+  background: url(../img/BrandKentNah.png);
+  width: 381px;
+  height: 450px;
+}
+
+.glitch:before, .glitched:before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 332px;
   height: 180px;
   background: url(../img/cvnah.png);
   background-size: auto;
-  background-repeat: no-repeat;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   -webkit-animation: glitch2 10s linear infinite;
           animation: glitch2 10s linear infinite;
-  z-index: -1;
 }
 
-.glitch:hover:before {
+.glitched:before {
+  background: url(../img/BrandKentNah.png);
+  width: 381px;
+  height: 450px;
+}
+
+.glitch:hover:before, .glitched:hover:before,
+.glitched:hover:before {
   -webkit-animation: glitch1 1s linear infinite;
           animation: glitch1 1s linear infinite;
 }
@@ -518,6 +534,56 @@ ul li a {
   }
 }
 
+@-webkit-keyframes colors {
+  16.66% {
+    background: #5e9dc6;
+  }
+  33.33% {
+    background: #006188;
+  }
+  50% {
+    background: #543ab7;
+  }
+  66.66% {
+    background: salmon;
+  }
+  83.33% {
+    background: #006188;
+  }
+  100% {
+    background: #5e9dc6;
+  }
+}
+
+@keyframes colors {
+  16.66% {
+    background: #5e9dc6;
+  }
+  33.33% {
+    background: #006188;
+  }
+  50% {
+    background: #543ab7;
+  }
+  66.66% {
+    background: salmon;
+  }
+  83.33% {
+    background: #006188;
+  }
+  100% {
+    background: #5e9dc6;
+  }
+}
+
+.multicolorbody {
+  width: 100%;
+  height: 100vh;
+  background: #5e9dc6;
+  -webkit-animation: colors 12s linear infinite;
+          animation: colors 12s linear infinite;
+}
+
 /*_____________2.Header: logo, navbar, searchbar_____________*/
 header {
   background-image: url(../img/background_space_header.webp);
@@ -581,6 +647,7 @@ main {
 .mainLogcard {
   background-image: linear-gradient(135deg, rgba(90, 107, 151, 0.432) 0%, rgba(15, 34, 49, 0.432) 100%);
   border-radius: 1rem;
+  padding: 2rem;
   text-align: center;
   -webkit-filter: opacity(80);
           filter: opacity(80);
@@ -599,6 +666,11 @@ main {
 }
 
 /*____________5.Projects____________*/
+.projectsback {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #0235ff), color-stop(65%, #40d8fe), color-stop(66%, #506F09), to(#88B311));
+  background-image: linear-gradient(180deg, #0235ff 20%, #40d8fe 65%, #506F09 66%, #88B311 100%);
+}
+
 .projects {
   height: 33.75rem;
   padding-top: 4rem;
@@ -679,12 +751,11 @@ main {
 .contactIlus img {
   position: absolute;
   margin-top: -2.5rem;
-  margin-left: -6rem;
 }
 
 /*____________7.Prices____________*/
 .prices {
-  height: 33.75rem;
+  height: auto;
 }
 
 /*____________8.Cv____________*/
