@@ -78,32 +78,48 @@
     }
   }
 }
-.glitch {
+.glitc {
   position: relative;
-  width: 332px;
-  height: 180px;
-  background: url(../img/cvnah.png);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   background-repeat: no-repeat;
   z-index: -1;
 }
-
+.glitch {
+  @extend .glitc;
+  background: url(../img/cvnah.png);
+  width: 332px;
+  height: 180px;
+}
+.glitched {
+  @extend .glitch;
+  background: url(../img/BrandKentNah.png);
+  width: 508px;
+  height: 600px;
+}
 .glitch:before {
+  @extend .glitc;
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 332px;
   height: 180px;
   background: url(../img/cvnah.png);
   background-size: auto;
-  background-repeat: no-repeat;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   animation: glitch2 10s linear infinite;
-  z-index: -1;
+}
+.glitched:before {
+  @extend .glitch:before;
+  background: url(../img/BrandKentNah.png);
+  width: 508px;
+  height: 600px;
 }
 
-.glitch:hover:before {
+.glitch:hover:before,
+.glitched:hover:before {
   animation: glitch1 1s linear infinite;
 }
 
@@ -167,4 +183,29 @@
     background-position: 0 0;
     filter: hue-rotate(0deg);
   }
+}
+$animation-name: colors;
+$stops: (
+  16.66%: $primary-color,
+  33.33%: $secondary-color,
+  50%: $primary-color-cta,
+  66.66%: $primary-color-contacts,
+  83.33%: $secondary-color,
+  100%: $primary-color,
+);
+@mixin keyframe-generator($map, $name) {
+  @keyframes #{$name} {
+    @each $key, $value in $map {
+      #{$key} {
+        background: $value;
+      }
+    }
+  }
+}
+@include keyframe-generator($stops, $animation-name);
+.multicolorbody {
+  width: 100%;
+  height: 100vh;
+  background: $primary-color;
+  animation: $animation-name 12s linear infinite;
 }
