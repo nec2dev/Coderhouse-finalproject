@@ -2,7 +2,7 @@
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
 @mixin mobile {
-    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: 0; right:-35%;} .brandKent img {width: 60%;}  
+    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: 0; right:-35%; width: 60%;} .brandKent img {width: 60%;}  
     #navbarSupportedContent {background: rgba(141, 141, 141, 0.226); backdrop-filter: saturate(180%) blur(10px); border-radius: 1rem; padding: 1rem;}
 }
 @media (max-width: 575px) {
@@ -20,8 +20,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
     @include mobile;
     .cvContainer {display: grid; grid-template-columns: 35% 65%; grid-template-rows: 40% 40% 20%; grid-template-areas: "cv-center cv-center""cv-left cv-right""cv-left cv-friends";}
-    .brandKent img {width: 80%;}
-    .mainFacemenu img {width: 110%;}
+    .brandKent img {width: 80%;} .mainFacemenu img {width: 110%;}
 }
 /* Large devices (desktops, 992px and 1199px) */
 @media only screen and (min-width:992px) {

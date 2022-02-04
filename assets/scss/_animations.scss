@@ -79,14 +79,13 @@
   }
 }
 .glitc {
-  position: absolute;
-  top: 0;
+  position:absolute;
+  background-repeat: no-repeat;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
-  background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 0;
 }
 .glitch {
   @extend .glitc;
@@ -97,8 +96,8 @@
 .glitched {
   @extend .glitch;
   background: url(../img/BrandKentNah.png);
-  width: 381px;
-  height: 450px;
+  width: 508px;
+  height: 600px;
 }
 .glitch:before {
   @extend .glitc;
@@ -106,7 +105,6 @@
   width: 332px;
   height: 180px;
   background: url(../img/cvnah.png);
-  background-size: auto;
   opacity: 0.5;
   mix-blend-mode: hard-light;
   animation: glitch2 10s linear infinite;
@@ -114,8 +112,8 @@
 .glitched:before {
   @extend .glitch:before;
   background: url(../img/BrandKentNah.png);
-  width: 381px;
-  height: 450px;
+  width: 508px;
+  height: 600px;
 }
 
 .glitch:hover:before,
