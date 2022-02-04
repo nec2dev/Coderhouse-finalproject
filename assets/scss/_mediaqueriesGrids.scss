@@ -2,7 +2,7 @@
 /* No media query for `xs` since this is the default in Bootstrap */
 /* X-Small devices (portrait phones, less than 576px) */
 @mixin mobile {
-    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3;bottom: 0; right:-35%; width: 60%;} .brandKent img {width: 60%;}  
+    .cv-left {text-align: left; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: 0; right:-35%; width: 60%;} .brandKent img {width: 60%;}  
     #navbarSupportedContent {background: rgba(141, 141, 141, 0.226); backdrop-filter: saturate(180%) blur(10px); border-radius: 1rem; padding: 1rem;}
 }
 @media (max-width: 575px) {
@@ -26,7 +26,7 @@
 @media only screen and (min-width:992px) {
     .cvContainer {display: grid; grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; grid-template-rows: 75% 25%; grid-template-areas: "cv-left cv-left cv-center cv-center cv-center cv-center cv-right cv-right""cv-left cv-left cv-friends cv-friends cv-friends cv-friends cv-friends cv-friends";}
     .cv-left {text-align: center; padding: 0.5rem 0.5rem;} .brandKent {position: absolute; z-index:3; bottom: 0; right: 22%;}
-    .mainFacemenu img {width: 120%; margin-left: -6rem; margin-top: -3rem;} 
+    .mainFacemenu img {width: 115%; margin-left: -6rem; margin-top: -6rem;} 
 }
 /* X-Large devices (large desktops, 1200px and 1399px) */
 /* XX-Large devices (larger desktops, 1400px and up) */

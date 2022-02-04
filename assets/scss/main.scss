@@ -103,6 +103,7 @@ main {
 }
 .contactIlus {
     border-radius: 1rem;
+    margin-top: 2rem;
     overflow: hidden;
     img {
         position: absolute;
@@ -157,6 +158,9 @@ main {
     justify-content: space-around;
     align-items: baseline;
     overflow: hidden;
+}
+.brandKent {
+    width: 100%;
 }
 @import 'footer';
 @import 'mediaqueriesGrids';

@@ -353,7 +353,6 @@ ul li a {
 
 .glitc, .glitch, .glitched, .glitch:before, .glitched:before {
   position: absolute;
-  background-repeat: no-repeat;
   left: 0;
   right: 0;
   bottom: 0;
@@ -363,6 +362,7 @@ ul li a {
 
 .glitch, .glitched {
   background: url(../img/cvnah.png);
+  background-repeat: no-repeat;
   width: 332px;
   height: 180px;
 }
@@ -743,6 +743,7 @@ main {
 
 .contactIlus {
   border-radius: 1rem;
+  margin-top: 2rem;
   overflow: hidden;
 }
 
@@ -812,6 +813,10 @@ main {
       -ms-flex-align: baseline;
           align-items: baseline;
   overflow: hidden;
+}
+
+.brandKent {
+  width: 100%;
 }
 
 /*____________9.Footer____________*/
@@ -971,9 +976,9 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     right: 22%;
   }
   .mainFacemenu img {
-    width: 120%;
+    width: 115%;
     margin-left: -6rem;
-    margin-top: -3rem;
+    margin-top: -6rem;
   }
 }
 

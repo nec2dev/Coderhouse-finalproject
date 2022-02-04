@@ -80,7 +80,6 @@
 }
 .glitc {
   position:absolute;
-  background-repeat: no-repeat;
   left: 0;
   right: 0;
   bottom: 0;
@@ -90,6 +89,7 @@
 .glitch {
   @extend .glitc;
   background: url(../img/cvnah.png);
+  background-repeat: no-repeat;
   width: 332px;
   height: 180px;
 }
