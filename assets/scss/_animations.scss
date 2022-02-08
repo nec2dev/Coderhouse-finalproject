@@ -1,4 +1,5 @@
 /*____________animations & effects____________*/
+/*_____________Waves effect_____________*/
 #canvas {
   position: absolute;
   top: 0;
@@ -11,6 +12,7 @@
   min-height: 100px;
   max-height: 150px;
 }
+/*_____________Stars effect_____________*/
 .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
@@ -53,6 +55,7 @@
     transform: translateX(calc(-250px * 7));
   }
 }
+/*_____________Logo carousel effect_____________*/
 .slider {
   &::before,
   &::after {
@@ -78,8 +81,9 @@
     }
   }
 }
+/*_____________Glitch effect_____________*/
 .glitc {
-  position:absolute;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
@@ -88,10 +92,10 @@
 }
 .glitch {
   @extend .glitc;
-  background: url(../img/cvnah.png);
+  background: url(../img/spaceface.png);
   background-repeat: no-repeat;
-  width: 332px;
-  height: 180px;
+  width: 900px;
+  height: 801px;
 }
 .glitched {
   @extend .glitch;
@@ -102,9 +106,14 @@
 .glitch:before {
   @extend .glitc;
   content: "";
-  width: 332px;
-  height: 180px;
-  background: url(../img/cvnah.png);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 900px;
+  height: 801px;
+  background: url(../img/spaceface.png);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   animation: glitch2 10s linear infinite;
@@ -182,6 +191,7 @@
     filter: hue-rotate(0deg);
   }
 }
+/*_____________Colorfull effect_____________*/
 $animation-name: colors;
 $stops: (
   16.66%: $primary-color,

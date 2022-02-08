@@ -225,6 +225,7 @@ ul li a {
 }
 
 /*____________animations & effects____________*/
+/*_____________Waves effect_____________*/
 #canvas {
   position: absolute;
   top: 0;
@@ -242,6 +243,7 @@ ul li a {
   max-height: 150px;
 }
 
+/*_____________Stars effect_____________*/
 .parallax > use {
   -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
           animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -319,6 +321,7 @@ ul li a {
   }
 }
 
+/*_____________Logo carousel effect_____________*/
 .slider::before, .slider::after {
   background: -webkit-gradient(linear, left top, right top, from(white), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
@@ -351,6 +354,7 @@ ul li a {
   margin: 1rem;
 }
 
+/*_____________Glitch effect_____________*/
 .glitc, .glitch, .glitched, .glitch:before, .glitched:before {
   position: absolute;
   left: 0;
@@ -361,10 +365,10 @@ ul li a {
 }
 
 .glitch, .glitched {
-  background: url(../img/cvnah.png);
+  background: url(../img/spaceface.png);
   background-repeat: no-repeat;
-  width: 332px;
-  height: 180px;
+  width: 900px;
+  height: 801px;
 }
 
 .glitched {
@@ -375,9 +379,14 @@ ul li a {
 
 .glitch:before, .glitched:before {
   content: "";
-  width: 332px;
-  height: 180px;
-  background: url(../img/cvnah.png);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 900px;
+  height: 801px;
+  background: url(../img/spaceface.png);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   -webkit-animation: glitch2 10s linear infinite;
@@ -532,6 +541,7 @@ ul li a {
   }
 }
 
+/*_____________Colorfull effect_____________*/
 @-webkit-keyframes colors {
   16.66% {
     background: #5e9dc6;
@@ -552,7 +562,6 @@ ul li a {
     background: #5e9dc6;
   }
 }
-
 @keyframes colors {
   16.66% {
     background: #5e9dc6;
