@@ -1,3 +1,217 @@
+/*____________0. Standard SASS Reset____________*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/*____________1. Global Styles & Variables____________*/
+@font-face {
+  font-family: "microgramma";
+  src: url("../typography/Microgramma.otf");
+}
+
+.fab {
+  color: white;
+  text-decoration: none;
+  margin: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body {
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.8em;
+  margin: 1rem 0 1rem 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+.simple-btn {
+  background-color: #5e9dc6;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.simple-btn:hover {
+  background-color: #006188;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+}
+
+.cta-btn {
+  background-color: #543ab7;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.cta-btn:hover {
+  background-color: #322272;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+}
+
+.contact-btn {
+  background-color: salmon;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background-color: #883f36;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+}
+
+.container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.container h3 {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.container a, .container #navbarDropdown {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.container ul {
+  padding-left: 0;
+}
+
+.logoFilter {
+  -webkit-filter: invert(75%);
+          filter: invert(75%);
+}
+
+.navbar-nav li a, .dropdown-menu li a {
+  color: #006188;
+}
+
+.accordion-button:after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.dropdown-menu {
+  margin-right: -1rem;
+}
+
 .bodyerror {
   --opacidad-negro: 0.8;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, var(--opacidad-negro))), to(rgba(0, 0, 0, var(--opacidad-negro)))), url(../img/background_space.webp);
@@ -110,5 +324,28 @@
     opacity: 0.4;
     text-shadow: none;
   }
+}
+
+/*____________9.Footer____________*/
+footer {
+  margin-top: 1rem;
+}
+
+footer ul {
+  margin-bottom: 1.5rem;
+}
+
+footer img {
+  width: 6rem;
+  margin: 0.2rem 0;
+}
+
+footer .container-fluid .container a, footer .container-fluid .container p, footer .container-fluid .container h3, footer .container-fluid .container .fab {
+  color: #414141;
+}
+
+.copyright {
+  text-align: center;
+  margin: 1rem;
 }
 /*# sourceMappingURL=error404.css.map */
