@@ -365,10 +365,9 @@ ul li a {
 }
 
 .glitch, .glitched {
-  background: url(../img/spaceface.png);
   background-repeat: no-repeat;
-  width: 900px;
-  height: 801px;
+  width: auto;
+  height: auto;
 }
 
 .glitched {
@@ -384,9 +383,9 @@ ul li a {
   right: 0;
   bottom: 0;
   margin: auto;
-  width: 900px;
-  height: 801px;
-  background: url(../img/spaceface.png);
+  width: auto;
+  height: auto;
+  background: url(../img/spacefaceTest.png);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   -webkit-animation: glitch2 10s linear infinite;
@@ -589,6 +588,220 @@ ul li a {
   background: #5e9dc6;
   -webkit-animation: colors 12s linear infinite;
           animation: colors 12s linear infinite;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clr {
+  clr: both;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.icon {
+  background: url(https://s.cdpn.io/6035/glyphicons-halflings-white.png) no-repeat;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-position: 14px 14px;
+}
+
+.icon-plus {
+  background-position: -408px -96px;
+}
+
+.icon-minus {
+  background-position: -433px -96px;
+}
+
+.icon-remove {
+  background-position: -312px 0;
+}
+
+.btn-quantity {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+  line-height: 25px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+}
+
+.btn-quantity.plus {
+  background: #3498db;
+}
+
+.btn-quantity.plus:hover {
+  background: #217dbb;
+}
+
+.btn-quantity.minus {
+  background: #e74c3c;
+}
+
+.btn-quantity.minus:hover {
+  background: #d62c1a;
+}
+
+.btn-remove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 10;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+  line-height: 25px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  background: #c0392b;
+}
+
+.btn-remove:hover {
+  background: #962d22;
+}
+
+.btn-remove .icon {
+  margin-top: 2px;
+}
+
+.btn-checkout {
+  color: #fff;
+  text-decoration: none;
+  margin: 20px 0 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  line-height: 25px;
+  -webkit-box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  background: #2ecc71;
+}
+
+.btn-checkout:hover {
+  background: #25a25a;
+}
+
+.items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.item img {
+  border-radius: 5px 5px 0 0;
+}
+
+.item .preview ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+}
+
+.item .preview li {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+.item .preview li.active {
+  opacity: 1;
+}
+
+.item .details {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.item .details:before {
+  content: attr(data-price);
+  position: absolute;
+  font-weight: 600;
+  font-size: 75px;
+  color: #f8f8f8;
+  right: -10px;
+  top: -27px;
+  z-index: 0;
+}
+
+.item .details h3 {
+  margin: 0 0 5px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.item .details p {
+  font-size: .875em;
+  line-height: 1.5em;
+}
+
+.item .details input[type="number"] {
+  width: 50px;
+  height: 30px;
+  padding: 2px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #ccc;
+}
+
+.summary {
+  padding: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.summary .meta-data {
+  border-right: 1px solid #eee;
+}
+
+.summary .total {
+  font-size: 3em;
+  text-align: center;
+  line-height: 65px;
 }
 
 /*_____________2.Header: logo, navbar, searchbar_____________*/
