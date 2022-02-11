@@ -13,6 +13,8 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     text-size-adjust: none;
+    -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 footer, header, nav, section, main{

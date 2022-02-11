@@ -111,127 +111,296 @@
     </header>
 
     <!-- Prices -->
-    <div class="container-fluid">
-        <div class="cart">
-            <div class="container">
-              <div class="grid_12">
-                <div class="grid_12 summary">
-                    <div class="inner_container">
-                      <div class="col_1of2 meta-data">
+    <div class="container">
+        <div class="row col-12">
+            <div class="summary">
+                <div class="inner_container  row col-12">
+                    <div class="meta-data col-4">
                         <div class="sub-total">
-                          <em>Sub Total: </em><span class="amount"></span>
+                            <em>Sub Total: </em><span class="amount"></span>
                         </div>
                         <div class="taxes">
-                          <em>Sales Tax: </em><span class="amount">5%</span>
+                            <em>Sales Tax: </em><span class="amount">21%</span>
                         </div>
                         <div class="shipping">
-                          <em>Shipping: </em><span class="amount">$20</span>
+                            <em>Shipping: </em><span class="amount">$20</span>
                         </div>
-                      </div>
-                      <div class="col_1of2">
-                        <div class="total">
-                          <span class="amount"></span>
+                        <div class="total d-flex justify-content-start">$ 290
+                            <span class="amount"></span>
                         </div>
-                      </div>
-                      <div class="col_1of1">
-                        <a href="#" class="btn-checkout">Checkout</a>
-                      </div>
                     </div>
-                <h1>Cart</h1>
-              </div>
-              <ul class="items">
-                <li class="grid_4 item">
-                  <a href="#" class="btn-remove">
-                    <span class="icon icon-remove"></span>
-                  </a>
-                  <div class="preview">
-                    <ul class="images" data-images="[&quot;https://s.cdpn.io/6035/purplebike_01.jpg&quot;,&quot;https://s.cdpn.io/6035/purplebike_02.jpg&quot;,&quot;https://s.cdpn.io/6035/purplebike_03.jpg&quot;,&quot;https://s.cdpn.io/6035/purplebike_04.jpg&quot;]">
-                      <li><img src="https://s.cdpn.io/6035/purplebike_01.jpg" /></li>
-                      <li><img src="https://s.cdpn.io/6035/purplebike_02.jpg" /></li>
-                      <li><img src="https://s.cdpn.io/6035/purplebike_03.jpg" /></li>
-                      <li><img src="https://s.cdpn.io/6035/purplebike_04.jpg" /></li>
-                    </ul>
-                    <img src="https://s.cdpn.io/6035/purplebike_01.jpg" />
-                  </div>
-                  <div class="details" data-price="440">
-                    <h3>
-                      58cm Purple Miele
-                      <span class="right">$440</span>
-                    </h3>
-                    <p>Look at your bike. Now back to this bike . Now back to your bike. Now back to this bike. Sadly, your bike just isn't as sexy</p>
-                    <div class="inner_container">
-                      <div class="col_1of2">
-                        <p><span class="current_quantity">1</span> @ $440</p>
-                      </div> 
-                      <div class="col_1of2 align-right">
-                        <p>
-                          <a href="#" class="btn-quantity plus">
-                            <span class="icon icon-plus"></span>
-                          </a>
-                          <a href="#" class="btn-quantity minus">
-                            <span class="icon icon-minus"></span>
-                          </a>
-                        </p>
-                        <input type="hidden" class="quantity_field" name="quantity" value="1" data-price="440" />
-                      </div>          
+                    <div class="col-4"></div>
+                    <div class="col-4 d-flex justify-content-end">
+                        <img src="../assets/img/cartilus.png" alt="">
                     </div>
-                  </div>
-                </li>
-                <li class="grid_4 item">
-                  <a href="#" class="btn-remove">
-                    <span class="icon icon-remove"></span>
-                  </a>
-                  <div class="preview">
-                    <ul class="images" data-images="[&quot;https://s.cdpn.io/6035/bluebike_01.jpg&quot;,&quot;https://s.cdpn.io/6035/bluebike_02.jpg&quot;,&quot;https://s.cdpn.io/6035/bluebike_03.jpg&quot;,&quot;https://s.cdpn.io/6035/bluebike_04.jpg&quot;]">
-                      <li><img src="https://s.cdpn.io/6035/bluebike_01.jpg" /></li>
-                      <li><img src="https://s.cdpn.io/6035/bluebike_02.jpg" /></li>
-                      <li><img src="https://s.cdpn.io/6035/bluebike_03.jpg" /></li>
-                      <li><img src="https://s.cdpn.io/6035/bluebike_04.jpg" /></li>
-                    </ul>
-                    <img src="https://s.cdpn.io/6035/purplebike_01.jpg" />
-                  </div>
-                  <div class="details" data-price="475">
-                    <h3>
-                      47cm Blue Steve Bauer
-                      <span class="right">$475</span>
-                    </h3>
-                    <p>WAIT ONE MINUTE! If you're not 5'1 and under, you will probably only get half a pedal stroke in before your knees hit...</p>
-                    <div class="inner_container">
-                      <div class="col_1of2">
-                        <p><span class="current_quantity">1</span> @ $475</p>
-                      </div> 
-                      <div class="col_1of2 align-right">
-                        <p>
-                          <a href="#" class="btn-quantity plus">
-                            <span class="icon icon-plus"></span>
-                          </a>
-                          <a href="#" class="btn-quantity minus">
-                            <span class="icon icon-minus"></span>
-                          </a>
-                        </p>
-                        <input type="hidden" class="quantity_field" name="quantity" data-price="475" value="1" />
-                      </div>          
+                    <div class="col-12">
+                        <a href=""><button type="button" class="checkout-btn">Chechout</button></a>
                     </div>
-                  </div>
-                </li>
-              </ul>
-              </div>
-            </div>
-          </div>
-        <div class="pricesVideowall">
-            <video width="100%" height="1080px" controls>
-                <source src="" type="video/mp4">
-            </video>
-            <div class="container">
-                <h2>Prices</h2>
-                <p>If you’re new to budgeting, Quicken’s free budget calculator can help you get started. This budget maker will walk you through the key budgeting categories you’ll need step by step. See where your money is going and create a plan to pay down debt, grow your savings, and meet your long-term financial goals.</p>
+                </div>
             </div>
         </div>
     </div>
-
+    <div class="pricesVideowall">
+        <div class="container">
+            <h2>Prices</h2>
+            <p>If you’re new to budgeting, Quicken’s free budget calculator can help you get started.
+                This budget
+                maker will walk you through the key budgeting categories you’ll need step by step. See
+                where your
+                money is going and create a plan to pay down debt, grow your savings, and meet your
+                long-term
+                financial goals.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+                <div class="prices-container">
+                    <div class="front" style="background-image: url(../assets/img/wallsol-1.png)">
+                        <div class="inner">
+                            <p><img src="../assets/img/logosolutions/alkemi.svg" alt="alkemi logo"></p>
+                            <!-- <p>alkemi</p> -->
+                            <span>Financial Analysis</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p><input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Financial evaluation</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Financial study</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Administrative study</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Technical study</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Conclusions</label><br>
+                            </p>
+                            <p>Deliverable: Financial Analysis Report<br>
+                                <a href=""><button type="button" class="quantity-btn plus"> + </button></a>
+                                <a href=""><button type="button" class="quantity-btn minus"> -</button></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+                <div class="prices-container">
+                    <div class="front" style="background-image: url(../assets/img/wallsol-2.png)">
+                        <div class="inner">
+                            <p><img src="../assets/img/logosolutions/aparzero.svg" alt="apar-zero logo"></p>
+                            <!-- <p>apar-zero</p> -->
+                            <span>Design System</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="inner">
+                            <p><input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Atoms</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Molecules</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Organisms</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Templates</label><br>
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">Pages</label><br>
+                            </p>
+                            <p>Deliverable: Corporate ID Report<br>
+                                <a href=""><button type="button" class="quantity-btn plus"> + </button></a>
+                                <a href=""><button type="button" class="quantity-btn minus"> - </button></a>
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+            <div class="prices-container">
+                <div class="front" style="background-image: url(../assets/img/wallsol-3.png)">
+                    <div class="inner">
+                        <p><img src="../assets/img/logosolutions/albatross.svg" alt="albatross logo"></p>
+                        <!-- <p>albatros</p> -->
+                        <span>Marketing Campaign</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Analysis</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Objetives</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Strategies</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Planning</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">live Dashboard</label><br>
+                        </p>
+                        <p>Deliverable: Breafing<br>
+                            <a href=""><button type="button" class="quantity-btn plus"> + </button></a>
+                            <a href=""><button type="button" class="quantity-btn minus"> -</button></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+            <div class="prices-container">
+                <div class="front" style="background-image: url(../assets/img/wallsol-4.png)">
+                    <div class="inner">
+                        <p><img src="../assets/img/logosolutions/arquitephia.svg" alt="arquitephia logo"></p>
+                        <!-- <p>arquitephia</p> -->
+                        <span>Design Sprint</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Map</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Sketch</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Storyboard</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Prototype</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Test</label><br>
+                        </p>
+                        <p>Deliverable: Prototype<br>
+                            <a href=""><button type="button" class="quantity-btn plus"> + </button></a>
+                            <a href=""><button type="button" class="quantity-btn minus"> -</button></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+            <div class="prices-container">
+                <div class="front" style="background-image: url(../assets/img/wallsol-5.png)">
+                    <div class="inner">
+                        <p><img src="../assets/img/logosolutions/abitat.svg" alt="abitat logo"></p>
+                        <!-- <p>a.bit.at</p> -->
+                        <span>Develop Sprint</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Start &/or Fundation</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Backlog</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Implementation</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Retrospective</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Release</label><br>
+                        </p>
+                        <p>Deliverable: MVP &/or Product<br>
+                            <a href=""><button type="button" class="quantity-btn plus"> + </button></a>
+                            <a href=""><button type="button" class="quantity-btn minus"> -</button></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+            <div class="prices-container">
+                <div class="front" style="background-image: url(../assets/img/wallsol-6.png)">
+                    <div class="inner">
+                        <p><img src="../assets/img/logosolutions/alephandria.svg" alt="alephandria logo"></p>
+                        <!-- <p>alephandria</p> -->
+                        <span>Improvement Sprint</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p><input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Monitor</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Feedback</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Contents</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Maintenance</label><br>
+                            <input class="form-check-input" type="checkbox" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Insight</label><br>
+                        </p>
+                        <p>Deliverable: Live Dashboard<br>
+                            <a href=""><button type="button" class="quantity-btn plus"> + </button></a>
+                            <a href=""><button type="button" class="quantity-btn minus"> -</button></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+            <div class="prices-container">
+                <div class="front" style="background-image: url(../assets/img/wallsol-7.png)">
+                    <div class="inner">
+                        <p><img src="../assets/img/logo.svg" alt="apar-zero logo"></p>
+                        <p>Global Project</p>
+                        <span>All solutions together</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Lovely! Your entire project from start to finish with us</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" ontouchstart="this.classList.toggle('hover');">
+            <div class="prices-container">
+                <div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+                    <div class="inner">
+                        <p><img src="../assets/img/logosolutions/wathever.svg" alt="whatever logo"></p>
+                        <p>Wathever</p>
+                        <span>Your Proposal</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="inner">
+                        <p>Bring us your personal proposal that we evaluate and budget</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <!--Footer,copyright-->
     <footer class="container">
-        <div class=row>
+        <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-2">
                 <h3>EXPLORE</h3>
                 <ul>
@@ -304,8 +473,10 @@
                 <p>+54 11 2 642 0901<br>nec2@solutions.com<br>3910 Saint Houston Street</p>
             </div>
             <div class="copyright col-sm-12 col-md-12 col-lg-12">
-                <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the context of
-                    educational development (com. 16745) in <img src="../assets/img/coderhouse.png" alt="coderhouse logo">.rights
+                <p>@nec2solutions 2022 create by the namesake nec2 solutions for your projects in the
+                    context of
+                    educational development (com. 16745) in <img src="../assets/img/coderhouse.png"
+                        alt="coderhouse logo">.rights
                     reserved</p>
             </div>
         </div>

@@ -17,6 +17,8 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
      -moz-text-size-adjust: none;
       -ms-text-size-adjust: none;
           text-size-adjust: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 footer, header, nav, section, main {
@@ -170,12 +172,111 @@ ul li a {
           box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
 }
 
+.checkout-btn {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.checkout-btn:hover {
+  background-color: #25a25a;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  -webkit-box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.quantity-btn {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-btn.plus {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  width: 3rem;
+}
+
+.quantity-btn.plus:hover {
+  background-color: #217dbb;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  width: 3rem;
+}
+
+.quantity-btn.minus {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  width: 3rem;
+}
+
+.quantity-btn.minus:hover {
+  background-color: #d62c1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 0.5rem;
+  width: 8rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bolder;
+  width: 3rem;
+}
+
 .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1.5rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: white;
 }
 
@@ -184,7 +285,8 @@ ul li a {
   font-weight: bold;
 }
 
-.container a, .container #navbarDropdown {
+.container a,
+.container #navbarDropdown {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -200,7 +302,8 @@ ul li a {
           filter: invert(75%);
 }
 
-.navbar-nav li a, .dropdown-menu li a {
+.navbar-nav li a,
+.dropdown-menu li a {
   color: #006188;
 }
 
