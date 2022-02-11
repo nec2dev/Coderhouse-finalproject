@@ -1,0 +1,42 @@
+{
+  "name": "coderhouse-nec2solutionscorrea",
+  "version": "1.0.0",
+  "description": "Este sitio personal ofrece soluciones a startups, empresas y negocios a lo largo de todo el crecimiento de la misma",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nec2dev/Coderhouse-nec2solutionsCorrea.git"
+  },
+  "keywords": [
+    "nec2",
+    "solutions",
+    "Financial",
+    "Analysis",
+    "Design",
+    "System",
+    "Marketing",
+    "Campaign",
+    "Design",
+    "Sprint",
+    "Develop",
+    "Sprint",
+    "Improvement",
+    "Sprint"
+  ],
+  "author": "Nahuel Ezequiel Correa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nec2dev/Coderhouse-nec2solutionsCorrea/issues"
+  },
+  "homepage": "https://github.com/nec2dev/Coderhouse-nec2solutionsCorrea#readme",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "save": "^2.4.0"
+  }
+}
