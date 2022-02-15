@@ -28,3 +28,19 @@ header {
 .headerNoImage {
   background-image: none;
 }
+#navbarSubDropdown {
+  background: rgba(141, 141, 141, 0.226); 
+  backdrop-filter: saturate(180%) blur(10px); 
+  border-radius: 1rem; 
+  padding: 1rem;
+  .dropdown-item {
+    color: $terciary-color;
+  }
+  a:hover {
+    background-color: $primary-color;
+    border-radius: 1rem;
+  }
+  .dropdown-menu a:hover {
+    background-color: $primary-color;
+  }
+}

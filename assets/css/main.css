@@ -327,6 +327,10 @@ ul li a {
   margin-right: -1rem;
 }
 
+.dropdown-menu {
+  background-color: #e74c3c;
+}
+
 /*____________animations & effects____________*/
 /*_____________Waves effect_____________*/
 #canvas {
@@ -473,7 +477,7 @@ ul li a {
 
 .glitch, .glitched {
   background-repeat: no-repeat;
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
@@ -877,6 +881,27 @@ header .container input .container-fluid .container .fab {
   background-image: none;
 }
 
+#navbarSubDropdown {
+  background: rgba(141, 141, 141, 0.226);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+          backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#navbarSubDropdown .dropdown-item {
+  color: white;
+}
+
+#navbarSubDropdown a:hover {
+  background-color: #5e9dc6;
+  border-radius: 1rem;
+}
+
+#navbarSubDropdown .dropdown-menu a:hover {
+  background-color: #5e9dc6;
+}
+
 /*____________3.Main: presentation,facemenu,logcard____________*/
 main {
   background-image: url(../img/background_space.webp);
@@ -1077,10 +1102,6 @@ main {
   overflow: hidden;
 }
 
-.brandKent {
-  width: 100%;
-}
-
 /*____________9.Footer____________*/
 footer {
   margin-top: 1rem;
@@ -1112,16 +1133,6 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     text-align: left;
     padding: 0.5rem 0.5rem;
   }
-  .brandKent {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    right: -35%;
-    width: 60%;
-  }
-  .brandKent img {
-    width: 60%;
-  }
   #navbarSupportedContent {
     background: rgba(141, 141, 141, 0.226);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
@@ -1146,16 +1157,6 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
   .cv-left {
     text-align: left;
     padding: 0.5rem 0.5rem;
-  }
-  .brandKent {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    right: -35%;
-    width: 60%;
-  }
-  .brandKent img {
-    width: 60%;
   }
   #navbarSupportedContent {
     background: rgba(141, 141, 141, 0.226);
@@ -1182,16 +1183,6 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     text-align: left;
     padding: 0.5rem 0.5rem;
   }
-  .brandKent {
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-    right: -35%;
-    width: 60%;
-  }
-  .brandKent img {
-    width: 60%;
-  }
   #navbarSupportedContent {
     background: rgba(141, 141, 141, 0.226);
     -webkit-backdrop-filter: saturate(180%) blur(10px);
@@ -1207,9 +1198,6 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     -ms-grid-rows: 40% 40% 20%;
         grid-template-rows: 40% 40% 20%;
         grid-template-areas: "cv-center cv-center" "cv-left cv-right" "cv-left cv-friends";
-  }
-  .brandKent img {
-    width: 80%;
   }
   .mainFacemenu img {
     width: 110%;
@@ -1231,11 +1219,11 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     text-align: center;
     padding: 0.5rem 0.5rem;
   }
-  .brandKent {
+  .portaglitch {
     position: absolute;
     z-index: 3;
     bottom: 0;
-    right: 22%;
+    right: 75%;
   }
   .mainFacemenu img {
     width: 115%;
