@@ -458,6 +458,10 @@ ul li a {
 }
 
 /*_____________Glitch effect_____________*/
+.portaglitch {
+  pointer-events: none;
+}
+
 .glitc, .glitch, .glitched, .glitch:before, .glitched:before {
   position: absolute;
   left: 0;
@@ -1130,7 +1134,7 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     display: grid;
     -ms-grid-columns: 100% 100% 100% 100%;
         grid-template-columns: 100% 100% 100% 100%;
-        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
+        grid-template-areas: "cv-center" "cv-left" "cv-friends" "cv-right";
   }
   .mainFacemenu img {
     width: 100%;
@@ -1165,7 +1169,7 @@ footer .container-fluid .container a, footer .container-fluid .container p, foot
     display: grid;
     -ms-grid-columns: 100% 100% 100% 100%;
         grid-template-columns: 100% 100% 100% 100%;
-        grid-template-areas: "cv-left" "cv-center" "cv-friends" "cv-right";
+        grid-template-areas: "cv-center" "cv-left" "cv-friends" "cv-right";
   }
   .mainFacemenu img {
     width: 100%;

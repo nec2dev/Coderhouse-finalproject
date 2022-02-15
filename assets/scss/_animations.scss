@@ -82,6 +82,9 @@
   }
 }
 /*_____________Glitch effect_____________*/
+.portaglitch {
+  pointer-events:none;
+}
 .glitc {
   position: absolute;
   left: 0;
