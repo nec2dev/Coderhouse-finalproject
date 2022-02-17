@@ -1,4 +1,4 @@
-@import 'reset', 'globals';
+@import 'reset', 'globals', 'header';
 .bodyerror { 
   --opacidad-negro: 0.8;
   background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../img/background_space.webp); background-repeat: repeat; background-position: top ; 

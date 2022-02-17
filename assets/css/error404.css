@@ -319,6 +319,60 @@ ul li a {
   background-color: #e74c3c;
 }
 
+/*_____________2.Header: logo, navbar, searchbar_____________*/
+header {
+  background-image: url(../img/background_space_header.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 6rem;
+  position: relative;
+}
+
+header .container input {
+  border-radius: 2em;
+  outline: solid rgba(255, 255, 255, 0.534);
+  background-color: white;
+  color: #006188;
+  height: 1.2rem;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+header .container input .container-fluid .container a,
+header .container input .container-fluid .container p,
+header .container input .container-fluid .container h3 {
+  color: #006188;
+}
+
+header .container input .container-fluid .container .fab {
+  color: #006188;
+}
+
+.headerNoImage {
+  background-image: none;
+}
+
+#navbarSubDropdown {
+  background: rgba(141, 141, 141, 0.226);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+          backdrop-filter: saturate(180%) blur(10px);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#navbarSubDropdown .dropdown-item {
+  color: white;
+}
+
+#navbarSubDropdown a:hover {
+  background-color: #5e9dc6;
+  border-radius: 1rem;
+}
+
+#navbarSubDropdown .dropdown-menu a:hover {
+  background-color: #5e9dc6;
+}
+
 .bodyerror {
   --opacidad-negro: 0.8;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, var(--opacidad-negro))), to(rgba(0, 0, 0, var(--opacidad-negro)))), url(../img/background_space.webp);
