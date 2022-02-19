@@ -54,17 +54,13 @@ main {
 .projectsback {
     background-image: linear-gradient(180deg, #0235ff 20%, #40d8fe 65%, #506F09 66%, #88B311 100%);
 }
-.projects {
-    height: 33.75rem;
-    padding-top: 4rem;
-}
 /*____________6.Contacts____________*/
 .contacts {
     background-image: url(../img/contactwallpaper.png);
     box-shadow: $box-shadow;
     color: rgb(65, 65, 65);
     border-radius: 1rem; 
-    margin: 3rem;  
+    margin: 2rem;  
     padding: 0.8rem 1.6rem;
 }
 .contacts-left {
