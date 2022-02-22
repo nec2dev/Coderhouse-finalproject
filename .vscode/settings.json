@@ -1,4 +1,6 @@
 {
     "vscode-pets.theme": "forest",
-    "vscode-pets.position": "explorer"
+    "vscode-pets.position": "explorer",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.inlayHints.fontFamily": "\"'Victor Mono', monospace\""
 }
